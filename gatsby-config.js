@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `verrdi-training-and-recruitment`,
+        short_name: `verrdi`,
         start_url: `/`,
         background_color: `#014124`,
         theme_color: `#014124`,
