@@ -1,5 +1,5 @@
 {
-  "name": "Verrdi Website",
+  "name": "verrdi-website",
   "private": true,
   "dependencies": {
     "gatsby": "^2.15.28",
