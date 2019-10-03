@@ -5,7 +5,7 @@ import Media from "react-media"
 import { createGlobalStyle } from "styled-components"
 import { device } from "../utils/device"
 
-import Nav from "./Nav"
+import Nav from "./nav"
 import MobileNav from "./mobileNav"
 
 const theme = {
