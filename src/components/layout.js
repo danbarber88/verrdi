@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { ThemeProvider } from "styled-components"
-import Media from "react-media"
+// import Media from "react-media"
 import { createGlobalStyle } from "styled-components"
 import { device } from "../utils/device"
 
 import Nav from "./nav"
-import MobileNav from "./mobileNav"
+// import MobileNav from "./mobileNav"
 
 const theme = {
   lightGreen: "#006738",
@@ -29,9 +29,10 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Media query="(max-width: 768px)">
+      {/* <Media query="(max-width: 768px)">
         {matches => (matches ? <MobileNav /> : <Nav />)}
-      </Media>
+      </Media> */}
+      <Nav />
       <main>{children}</main>
     </ThemeProvider>
   )
