@@ -25,11 +25,17 @@ const theme = {
   yellow: "#F9AD35",
   headerGray: "#535353",
   textGray: "#767676",
+  contentWidth: "60%",
 }
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    letter-spacing: 1px;
+  }
+
   body {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    
 
     @media ${device.tablet} {
       margin-top: 95px;
@@ -37,6 +43,21 @@ const GlobalStyle = createGlobalStyle`
 
     @media ${device.mobileL} {
       margin-top: 85px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    letter-spacing: 2px;
+
+    @media ${device.tablet} {
+      font-size: 32px;
+    }
+  }
+
+  p {
+    @media ${device.mobileL} {
+      font-size: 14px;
     }
   }
 `

@@ -1,7 +1,7 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  googleFonts: [{ name: "Montserrat", styles: [400, 600] }],
+  googleFonts: [{ name: "Montserrat", styles: [400, 500, 600] }],
   baseFontSize: "16px",
   scaleRatio: 2.625,
   headerFontFamily: ["Montserrat"],

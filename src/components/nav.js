@@ -60,6 +60,14 @@ const StyledHamburger = styled(Hamburger)`
   }
 `
 
+const StyledButton = styled(Button)`
+  margin-left: 60px;
+
+  @media ${device.laptop} {
+    margin-left: 30px;
+  }
+`
+
 const StyledLink = styled(Link)`
   transition: all 0.1s;
   padding: 44px 10px;
@@ -188,9 +196,9 @@ class Nav extends Component {
             <StyledLink to="#" activeClassName="active">
               Contact
             </StyledLink>
-            <Button green to="#">
+            <StyledButton green to="#">
               Book now
-            </Button>
+            </StyledButton>
           </LinkContainer>
         </Wrapper>
       </Container>

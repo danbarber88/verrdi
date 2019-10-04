@@ -1,7 +1,6 @@
 import "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { device } from "../utils/device"
 
 const Button = styled(Link)`
   text-align: center;
@@ -11,13 +10,8 @@ const Button = styled(Link)`
   color: #fff;
   border-radius: 2px;
   font-weight: bold;
-  margin-left: 60px;
   text-decoration: none;
   min-width: 124px;
-
-  @media ${device.laptop} {
-    margin-left: 30px;
-  }
 `
 
 export default Button
