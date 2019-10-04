@@ -14,7 +14,7 @@ const Container = styled.nav`
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0px;
+    left: 0;
     background-color: #fff;
   }
 `
@@ -75,11 +75,10 @@ const StyledLink = styled(Link)`
   }
 
   @media ${device.tablet} {
-    font-size: 32px;
-    font-weight: 400;
     margin: 20px 0;
     padding: 0px 10px;
     border: none;
+    font-weight: 400;
 
     opacity: ${props => (props.navOpen ? 1 : 0)};
     visibility: ${props => (props.navOpen ? "visible" : "hidden")};
@@ -93,37 +92,17 @@ const StyledLink = styled(Link)`
   }
 `
 
-const LinkContainer = styled.div`
-  display: flex;
+const MobileLinkContainer = styled.div`
+  flex-direction: column;
   align-items: center;
-
-  ${StyledLink}:hover, .active {
-    color: ${props => props.theme.green};
-    border-bottom: 3px solid ${props => props.theme.green};
-  }
-
-  ${StyledLink}:first-child {
-    display: none;
-  }
+  display: none;
+  font-size: 32px;
 
   @media ${device.tablet} {
+    display: flex;
     width: 100%;
-    flex-direction: column;
-    .active {
-      border: none;
-    }
-
-    #book-now-button {
-      display: none;
-    }
-
-    ${StyledLink}:hover, .active {
-      color: ${props => props.theme.headerGray};
-      border-bottom: none;
-    }
 
     ${StyledLink}:first-child {
-      display: block;
       padding-top: 30px;
       color: ${props => props.theme.yellow};
     }
@@ -133,6 +112,20 @@ const LinkContainer = styled.div`
     /* Delay the height animation to give the NavItems a chance to fade out on nav close */
     transition: ${props =>
       props.navOpen ? "height 0.15s ease-out" : "height 0.15s 0.35s ease-out"};
+  }
+`
+
+const LinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  ${StyledLink}:hover, .active {
+    color: ${props => props.theme.green};
+    border-bottom: 3px solid ${props => props.theme.green};
+  }
+
+  @media ${device.tablet} {
+    display: none;
   }
 `
 
@@ -159,12 +152,8 @@ class Nav extends Component {
           <StyledLogo />
           <StyledHamburger onClick={this.toggleNav} />
 
-          <LinkContainer navOpen={this.state.navOpen}>
-            <StyledLink
-              to="#"
-              activeClassName="active"
-              navOpen={this.state.navOpen}
-            >
+          <MobileLinkContainer navOpen={this.state.navOpen}>
+            <StyledLink to="#" navOpen={this.state.navOpen}>
               Book Now
             </StyledLink>
             <StyledLink
@@ -174,28 +163,31 @@ class Nav extends Component {
             >
               Home
             </StyledLink>
-            <StyledLink
-              to="#"
-              activeClassName="active"
-              navOpen={this.state.navOpen}
-            >
+            <StyledLink to="#" navOpen={this.state.navOpen}>
               About
             </StyledLink>
-            <StyledLink
-              to="#"
-              activeClassName="active"
-              navOpen={this.state.navOpen}
-            >
+            <StyledLink to="#" navOpen={this.state.navOpen}>
               News
             </StyledLink>
-            <StyledLink
-              to="#"
-              activeClassName="active"
-              navOpen={this.state.navOpen}
-            >
+            <StyledLink to="#" navOpen={this.state.navOpen}>
               Contact
             </StyledLink>
-            <Button green to="#" id="book-now-button">
+          </MobileLinkContainer>
+
+          <LinkContainer>
+            <StyledLink to="/" activeClassName="active">
+              Home
+            </StyledLink>
+            <StyledLink to="#" activeClassName="active">
+              About
+            </StyledLink>
+            <StyledLink to="#" activeClassName="active">
+              News
+            </StyledLink>
+            <StyledLink to="#" activeClassName="active">
+              Contact
+            </StyledLink>
+            <Button green to="#">
               Book now
             </Button>
           </LinkContainer>

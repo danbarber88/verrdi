@@ -19,6 +19,8 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
   body {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
     @media ${device.tablet} {
       margin-top: 95px;
     }
@@ -29,9 +31,6 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {/* <Media query="(max-width: 768px)">
-        {matches => (matches ? <MobileNav /> : <Nav />)}
-      </Media> */}
       <Nav />
       <main>{children}</main>
     </ThemeProvider>
