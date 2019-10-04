@@ -9,6 +9,7 @@ import { device } from "../utils/device"
 
 const Container = styled.nav`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 100;
 
   @media ${device.tablet} {
     width: 100%;

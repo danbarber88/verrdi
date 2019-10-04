@@ -5,8 +5,18 @@ import { ThemeProvider } from "styled-components"
 import { createGlobalStyle } from "styled-components"
 import { device } from "../utils/device"
 
+import { library } from "@fortawesome/fontawesome-svg-core"
+import {
+  fab,
+  faInstagram,
+  faLinkedin,
+  faFacebookSquare,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
+
 import Nav from "./nav"
-// import MobileNav from "./mobileNav"
+
+library.add(fab, faInstagram, faLinkedin, faFacebookSquare, faTwitter)
 
 const theme = {
   lightGreen: "#006738",
@@ -23,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
 
     @media ${device.tablet} {
       margin-top: 95px;
+    }
+
+    @media ${device.mobileL} {
+      margin-top: 85px;
     }
   }
 `
