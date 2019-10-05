@@ -7,6 +7,7 @@ import Button from "../components/button"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { device } from "../utils/device"
+import MapSection from "../components/mapSection"
 
 const TrainingSection = styled.section`
   max-width: 850px;
@@ -150,6 +151,7 @@ const IndexPage = () => (
         </CardContent>
       </Card>
     </FlexibleServerSection>
+    <MapSection />
   </Layout>
 )
 
