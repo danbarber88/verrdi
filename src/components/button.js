@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const Button = styled(Link)`
+  display: inline-block;
   text-align: center;
   padding: 7.5px 10px;
   background-color: ${props =>

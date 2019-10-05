@@ -13,10 +13,19 @@ import {
   faFacebookSquare,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
+import { faHandshake, faUser } from "@fortawesome/free-regular-svg-icons"
 
 import Nav from "./nav"
 
-library.add(fab, faInstagram, faLinkedin, faFacebookSquare, faTwitter)
+library.add(
+  fab,
+  faInstagram,
+  faLinkedin,
+  faFacebookSquare,
+  faTwitter,
+  faHandshake,
+  faUser
+)
 
 const theme = {
   lightGreen: "#006738",

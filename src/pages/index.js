@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 import MainBanner from "../components/mainBanner"
 import Button from "../components/button"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { device } from "../utils/device"
 
 const TrainingSection = styled.section`
   max-width: 850px;
@@ -43,6 +45,57 @@ const LearnMore = styled(Link)`
   }
 `
 
+const FlexibleServerSection = styled.section`
+  max-width: 850px;
+  margin: 150px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+`
+
+const Card = styled.div`
+  width: 380px;
+  margin: 20px 20px 0 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: ${props => props.theme.green};
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.12), 1px 3px 4px rgba(0, 0, 0, 0.24),
+    0px -1px 4px rgba(0, 0, 0, 0.25);
+
+  h2 {
+    font-size: 36px;
+  }
+
+  @media ${device.tablet} {
+    h2 {
+      font-size: 32px;
+    }
+  }
+`
+
+const IconContainer = styled.div`
+  border-radius: 10px 10px 0 0;
+`
+
+const CardIcon = styled(FontAwesomeIcon)`
+  font-size: 100px;
+  color: #fff;
+  margin: 30px;
+`
+
+const CardContent = styled.div`
+  border-radius: 10px;
+  padding: 30px 15px;
+  background-color: #fff;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -63,6 +116,40 @@ const IndexPage = () => (
         <LearnMore to="#">Learn More</LearnMore>
       </ButtonContainer>
     </TrainingSection>
+    <FlexibleServerSection>
+      <h1>Flexible Service</h1>
+      <Card>
+        <IconContainer>
+          <CardIcon icon={["far", "user"]} />
+        </IconContainer>
+        <CardContent>
+          <h2>Drivers</h2>
+          <p>
+            Discount for early booking, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.
+          </p>
+          <Button>Remind Me</Button>
+        </CardContent>
+      </Card>
+      <Card>
+        <IconContainer>
+          <CardIcon icon={["far", "handshake"]} />
+        </IconContainer>
+        <CardContent>
+          <h2>Business</h2>
+          <p>
+            Discount for volume, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation. eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation.
+          </p>
+          <Button>Learn More</Button>
+        </CardContent>
+      </Card>
+    </FlexibleServerSection>
   </Layout>
 )
 
