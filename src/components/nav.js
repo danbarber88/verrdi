@@ -82,22 +82,32 @@ const StyledLink = styled(Link)`
     margin: 0 10px;
     padding: 44px 5px;
   }
+`
 
-  @media ${device.tablet} {
-    margin: 20px 0;
-    padding: 0px 10px;
-    border: none;
-    font-weight: 400;
+const MobileNavItem = styled.div`
+  margin: 20px 0;
+  padding: 0px 10px;
+  font-weight: 400;
 
-    opacity: ${props => (props.navOpen ? 1 : 0)};
-    visibility: ${props => (props.navOpen ? "visible" : "hidden")};
+  opacity: ${props => (props.navOpen ? 1 : 0)};
+  visibility: ${props => (props.navOpen ? "visible" : "hidden")};
 
-    /* Delay the NavItems from fading in the give the nav a chance to fully open */
-    transition: ${props =>
-      props.navOpen ? "all 0.15s 0.35s ease-out" : "all 0.15s ease-out"};
-    /* Fade in from top to bottom when nav opens */
-    transform: ${props =>
-      props.navOpen ? "translateY(0px)" : "translateY(-60px)"};
+  /* Delay the NavItems from fading in the give the nav a chance to fully open */
+  transition: ${props =>
+    props.navOpen ? "all 0.15s 0.35s ease-out" : "all 0.15s ease-out"};
+  /* Fade in from top to bottom when nav opens */
+  transform: ${props =>
+    props.navOpen ? "translateY(0px)" : "translateY(-60px)"};
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.headerGray};
+  }
+
+  &.book-now a,
+  &.book-now {
+    padding-top: 30px;
+    color: ${props => props.theme.yellow};
   }
 `
 
@@ -110,11 +120,6 @@ const MobileLinkContainer = styled.div`
   @media ${device.tablet} {
     display: flex;
     width: 100%;
-
-    ${StyledLink}:first-child {
-      padding-top: 30px;
-      color: ${props => props.theme.yellow};
-    }
 
     height: ${props => (props.navOpen ? "460px" : "0")};
 
@@ -162,37 +167,41 @@ class Nav extends Component {
           <StyledHamburger onClick={this.toggleNav} />
 
           <MobileLinkContainer navOpen={this.state.navOpen}>
-            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
-              Book Now
-            </StyledLink>
-            <StyledLink to="/" navOpen={this.state.navOpen}>
-              Home
-            </StyledLink>
-            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
-              About
-            </StyledLink>
-            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
-              News
-            </StyledLink>
-            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
-              Contact
-            </StyledLink>
+            <MobileNavItem className="book-now" navOpen={this.state.navOpen}>
+              <Link to="/booking">Book Now</Link>
+            </MobileNavItem>
+
+            <MobileNavItem navOpen={this.state.navOpen}>
+              <Link to="/">Home</Link>
+            </MobileNavItem>
+
+            <MobileNavItem navOpen={this.state.navOpen}>
+              <Link to="/about">About</Link>
+            </MobileNavItem>
+
+            <MobileNavItem navOpen={this.state.navOpen}>
+              <Link to="/news">News</Link>
+            </MobileNavItem>
+
+            <MobileNavItem navOpen={this.state.navOpen}>
+              <Link to="/contact">Contact</Link>
+            </MobileNavItem>
           </MobileLinkContainer>
 
           <LinkContainer>
             <StyledLink to="/" activeClassName="active">
               Home
             </StyledLink>
-            <StyledLink to="/placeholder" activeClassName="active">
+            <StyledLink to="/about" activeClassName="active">
               About
             </StyledLink>
-            <StyledLink to="/placeholder" activeClassName="active">
+            <StyledLink to="/news" activeClassName="active">
               News
             </StyledLink>
-            <StyledLink to="/placeholder" activeClassName="active">
+            <StyledLink to="/contact" activeClassName="active">
               Contact
             </StyledLink>
-            <StyledButton green to="/placeholder">
+            <StyledButton green to="/booking">
               Book now
             </StyledButton>
           </LinkContainer>
