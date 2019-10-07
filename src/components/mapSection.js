@@ -92,7 +92,7 @@ const StyledWave = styled(Wave)`
   }
 `
 
-const MapWrapper = styled.div`
+const StyledMap = styled(Map)`
   width: 100%;
   height: 100%;
 `
@@ -115,12 +115,7 @@ const MapSection = () => (
     </TextContainer>
     <MapContainer>
       <StyledWave />
-      <Map
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_API_KEY}&v=3.exp&libraries=places`}
-        loadingElement={<MapWrapper />}
-        containerElement={<MapWrapper />}
-        mapElement={<MapWrapper />}
-      ></Map>
+      <StyledMap />
     </MapContainer>
   </Container>
 )

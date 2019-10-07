@@ -1,20 +1,16 @@
 import React from "react"
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from "react-google-maps"
+import { LoadScript, GoogleMap, Marker } from "@react-google-maps/api"
 
 // import mapIcon from '../images/map-icon.svg'
 const mapStyles = require("../utils/mapStyles.json")
 
-const Map = withScriptjs(
-  withGoogleMap(props => (
+const Map = () => (
+  <LoadScript googleMapsApiKey={process.env.GATSBY_GOOGLE_API_KEY}>
     <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 53.755539, lng: -0.382404 }}
-      defaultOptions={{
+      mapContainerStyle={{ height: "100%", width: "100%" }}
+      zoom={10}
+      center={{ lat: 53.755539, lng: -0.382404 }}
+      options={{
         styles: mapStyles.styles,
         disableDefaultUI: true,
       }}
@@ -27,7 +23,7 @@ const Map = withScriptjs(
         position={{ lat: 53.755529, lng: -0.382204 }}
       /> */}
     </GoogleMap>
-  ))
+  </LoadScript>
 )
 
 export default Map
