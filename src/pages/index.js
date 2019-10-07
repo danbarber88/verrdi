@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { device } from "../utils/device"
 import MapSection from "../components/mapSection"
+import Reviews from "../components/reviews"
 
 const TrainingSection = styled.section`
   max-width: 850px;
@@ -113,8 +114,8 @@ const IndexPage = () => (
         consectetur adipiscing elit, sed do eiusmod tempor.
       </p>
       <ButtonContainer>
-        <StyledButton to="#">Book now</StyledButton>
-        <LearnMore to="#">Learn More</LearnMore>
+        <StyledButton to="/placeholder">Book now</StyledButton>
+        <LearnMore to="/placeholder">Learn More</LearnMore>
       </ButtonContainer>
     </TrainingSection>
     <FlexibleServerSection>
@@ -152,6 +153,7 @@ const IndexPage = () => (
       </Card>
     </FlexibleServerSection>
     <MapSection />
+    <Reviews />
   </Layout>
 )
 

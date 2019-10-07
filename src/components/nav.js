@@ -162,23 +162,19 @@ class Nav extends Component {
           <StyledHamburger onClick={this.toggleNav} />
 
           <MobileLinkContainer navOpen={this.state.navOpen}>
-            <StyledLink to="#" navOpen={this.state.navOpen}>
+            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
               Book Now
             </StyledLink>
-            <StyledLink
-              to="/"
-              activeClassName="active"
-              navOpen={this.state.navOpen}
-            >
+            <StyledLink to="/" navOpen={this.state.navOpen}>
               Home
             </StyledLink>
-            <StyledLink to="#" navOpen={this.state.navOpen}>
+            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
               About
             </StyledLink>
-            <StyledLink to="#" navOpen={this.state.navOpen}>
+            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
               News
             </StyledLink>
-            <StyledLink to="#" navOpen={this.state.navOpen}>
+            <StyledLink to="/placeholder" navOpen={this.state.navOpen}>
               Contact
             </StyledLink>
           </MobileLinkContainer>
@@ -187,16 +183,16 @@ class Nav extends Component {
             <StyledLink to="/" activeClassName="active">
               Home
             </StyledLink>
-            <StyledLink to="#" activeClassName="active">
+            <StyledLink to="/placeholder" activeClassName="active">
               About
             </StyledLink>
-            <StyledLink to="#" activeClassName="active">
+            <StyledLink to="/placeholder" activeClassName="active">
               News
             </StyledLink>
-            <StyledLink to="#" activeClassName="active">
+            <StyledLink to="/placeholder" activeClassName="active">
               Contact
             </StyledLink>
-            <StyledButton green to="#">
+            <StyledButton green to="/placeholder">
               Book now
             </StyledButton>
           </LinkContainer>
