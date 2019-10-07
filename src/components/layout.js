@@ -16,6 +16,7 @@ import {
 import { faHandshake, faUser } from "@fortawesome/free-regular-svg-icons"
 
 import Nav from "./nav"
+import Footer from "./footer"
 
 library.add(
   fab,
@@ -77,6 +78,7 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Nav />
       <main>{children}</main>
+      <Footer />
     </ThemeProvider>
   )
 }
