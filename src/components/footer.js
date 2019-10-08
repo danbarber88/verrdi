@@ -9,7 +9,7 @@ const Wrapper = styled.footer`
   width: 100%;
   background-color: ${props => props.theme.green};
   border-top: 15px solid ${props => props.theme.lightGreen};
-  padding: 100px 15px 15px 15px;
+  padding: 100px 0 15px 0;
 `
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const Container = styled.div`
   margin: 0 auto;
   color: #fff;
   line-height: 32px;
-
+  padding: 0 15px;
   p {
     margin: 0;
   }

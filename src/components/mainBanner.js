@@ -81,6 +81,8 @@ const MainBanner = props => {
   return (
     <Container>
       <StyledImg
+        critical
+        fadeIn={false}
         fluid={mainImg.childImageSharp.fluid}
         backgroundColor={props.theme.darkGreen}
       />

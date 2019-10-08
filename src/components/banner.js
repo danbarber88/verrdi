@@ -73,9 +73,8 @@ const ImageContainer = styled.div`
 
   @media ${device.tablet} {
     width: 100%;
-    top: 0;
-    left: 0;
-    height: 250px;
+    max-height: 250px;
+    min-width: unset;
   }
 `
 
@@ -85,7 +84,8 @@ const StyledImg = styled(Img)`
   height: 350px;
 
   @media ${device.tablet} {
-    height: 250px;
+    width: 100%;
+    max-height: 250px;
   }
 `
 

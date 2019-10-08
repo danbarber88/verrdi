@@ -47,7 +47,7 @@ const LearnMore = styled(Link)`
   }
 `
 
-const FlexibleServerSection = styled.section`
+const FlexibleServiceSection = styled.section`
   max-width: 850px;
   margin: 150px auto;
   display: flex;
@@ -118,7 +118,7 @@ const IndexPage = () => (
         <LearnMore to="/contact">Learn More</LearnMore>
       </ButtonContainer>
     </TrainingSection>
-    <FlexibleServerSection>
+    <FlexibleServiceSection>
       <h1>Flexible Service</h1>
       <Card>
         <IconContainer>
@@ -151,7 +151,7 @@ const IndexPage = () => (
           <Button to="/bd">Learn More</Button>
         </CardContent>
       </Card>
-    </FlexibleServerSection>
+    </FlexibleServiceSection>
     <MapSection />
     <Reviews />
   </Layout>
