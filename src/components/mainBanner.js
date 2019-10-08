@@ -25,10 +25,13 @@ const IconContainer = styled.div`
   width: 40%;
   display: flex;
   justify-content: space-around;
-  color: ${props => props.theme.green};
   margin-bottom: -3.5vw;
   bottom: 7.5vw;
   left: 13%;
+
+  a {
+    color: ${props => props.theme.green};
+  }
 
   @media ${device.tablet} {
     width: 50%;
@@ -83,10 +86,38 @@ const MainBanner = props => {
       />
       <StyledWaves />
       <IconContainer>
-        <StyledIcon icon={["fab", "instagram"]} />
-        <StyledIcon icon={["fab", "linkedin"]} />
-        <StyledIcon icon={["fab", "facebook-square"]} />
-        <StyledIcon icon={["fab", "twitter"]} />
+        <a
+          target="_blank"
+          href="https://www.instagram.com/verrditrainingandrecruitment/"
+          className="social-link"
+          rel="noopener noreferrer nofollow"
+        >
+          <StyledIcon icon={["fab", "instagram"]} />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/company/verrdi-training-recruitment-ltd/"
+          className="social-link"
+          rel="noopener noreferrer nofollow"
+        >
+          <StyledIcon icon={["fab", "linkedin"]} />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/verrditrainingandrecruitmentltd/"
+          className="social-link"
+          rel="noopener noreferrer nofollow"
+        >
+          <StyledIcon icon={["fab", "facebook-square"]} />
+        </a>
+        <a
+          target="_blank"
+          href="https://twitter.com/LtdVerrdi"
+          className="social-link"
+          rel="noopener noreferrer nofollow"
+        >
+          <StyledIcon icon={["fab", "twitter"]} />
+        </a>
       </IconContainer>
     </Container>
   )

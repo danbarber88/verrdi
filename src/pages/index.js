@@ -114,8 +114,8 @@ const IndexPage = () => (
         consectetur adipiscing elit, sed do eiusmod tempor.
       </p>
       <ButtonContainer>
-        <StyledButton to="/placeholder">Book now</StyledButton>
-        <LearnMore to="/placeholder">Learn More</LearnMore>
+        <StyledButton to="/booking">Book now</StyledButton>
+        <LearnMore to="/contact">Learn More</LearnMore>
       </ButtonContainer>
     </TrainingSection>
     <FlexibleServerSection>
@@ -132,7 +132,7 @@ const IndexPage = () => (
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.
           </p>
-          <Button>Remind Me</Button>
+          <Button to="/bd">Remind Me</Button>
         </CardContent>
       </Card>
       <Card>
@@ -148,7 +148,7 @@ const IndexPage = () => (
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation.
           </p>
-          <Button>Learn More</Button>
+          <Button to="/bd">Learn More</Button>
         </CardContent>
       </Card>
     </FlexibleServerSection>

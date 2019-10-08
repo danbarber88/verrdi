@@ -105,8 +105,12 @@ const Bottom = styled.div`
     padding: 0 5px;
   }
 
-  a {
+  .policy-link {
     color: #fff;
+  }
+
+  .social-link {
+    color: ${props => props.theme.yellow};
   }
 
   @media ${device.laptop} {
@@ -177,19 +181,51 @@ const Footer = () => (
       <Bottom>
         <Copyright>
           <span>
-            © {new Date().getFullYear()} Verrdi Training & Recruitment Ltd{" "}
-            <span>| </span>
-            <br />
-            <Link to="/cookie-policy">Cookie Policy</Link>
+            © {new Date().getFullYear()} Verrdi Training & Recruitment Ltd
             <span> | </span>
-            <Link to="/privacy-policy">Privacy Policy</Link>
+            <br />
+            <Link to="/cookie-policy" className="policy-link">
+              Cookie Policy
+            </Link>
+            <span> | </span>
+            <Link to="/privacy-policy" className="policy-link">
+              Privacy Policy
+            </Link>
           </span>
         </Copyright>
         <IconContainer>
-          <FontAwesomeIcon icon={["fab", "instagram"]} />
-          <FontAwesomeIcon icon={["fab", "linkedin"]} />
-          <FontAwesomeIcon icon={["fab", "facebook-square"]} />
-          <FontAwesomeIcon icon={["fab", "twitter"]} />
+          <a
+            target="_blank"
+            href="https://www.instagram.com/verrditrainingandrecruitment/"
+            className="social-link"
+            rel="noopener noreferrer nofollow"
+          >
+            <FontAwesomeIcon icon={["fab", "instagram"]} />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/verrdi-training-recruitment-ltd/"
+            className="social-link"
+            rel="noopener noreferrer nofollow"
+          >
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/verrditrainingandrecruitmentltd/"
+            className="social-link"
+            rel="noopener noreferrer nofollow"
+          >
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} />
+          </a>
+          <a
+            target="_blank"
+            href="https://twitter.com/LtdVerrdi"
+            className="social-link"
+            rel="noopener noreferrer nofollow"
+          >
+            <FontAwesomeIcon icon={["fab", "twitter"]} />
+          </a>
         </IconContainer>
       </Bottom>
     </Container>
