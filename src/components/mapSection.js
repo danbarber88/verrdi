@@ -11,6 +11,7 @@ const Container = styled.section`
   border-top: 15px solid ${props => props.theme.green};
   border-bottom: 15px solid ${props => props.theme.green};
   z-index: -2;
+  margin: -1px 0;
 
   @media ${device.laptop} {
     flex-direction: column;
