@@ -8,6 +8,7 @@ import Button from "./button"
 import { device } from "../utils/device"
 
 const Container = styled.nav`
+  position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 100;
 
@@ -69,11 +70,13 @@ const StyledButton = styled(Button)`
 `
 
 const StyledLink = styled(Link)`
+  z-index: 100;
   transition: all 0.1s;
   padding: 44px 10px;
   margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
+
   color: ${props => props.theme.headerGray};
   border-bottom: 3px solid #fff;
   border-top: 3px solid #fff;
@@ -116,6 +119,7 @@ const MobileLinkContainer = styled.div`
   align-items: center;
   display: none;
   font-size: 32px;
+  background-color: #fff;
 
   @media ${device.tablet} {
     display: flex;
@@ -132,6 +136,7 @@ const MobileLinkContainer = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   align-items: center;
+  background-color: #fff;
 
   ${StyledLink}:hover, .active {
     color: ${props => props.theme.green};
@@ -201,7 +206,7 @@ class Nav extends Component {
             <StyledLink to="/contact" activeClassName="active">
               Contact
             </StyledLink>
-            <StyledButton green={"green" ? 1 : 0} to="/booking">
+            <StyledButton green={true ? 1 : 0} to="/booking">
               Book now
             </StyledButton>
           </LinkContainer>
