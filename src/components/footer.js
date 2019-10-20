@@ -40,7 +40,7 @@ const RecentNews = styled.div`
   h2 {
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
   }
 
   ul {
@@ -163,7 +163,7 @@ const Footer = () => (
           <br /> Hull
           <br /> HU1 5TK
         </p>
-        <Email mailto="sales@verrdi.co.uk">sales@verrdi.co.uk</Email>
+        <Email href="mailto:sales@verrdi.co.uk">sales@verrdi.co.uk</Email>
         <Phone href="tel:01482298119">01482 298119</Phone>
         <p>Company Number: 12041302</p>
         <p>Consortium Member: AC01885</p>

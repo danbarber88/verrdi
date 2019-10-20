@@ -14,6 +14,11 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { faHandshake, faUser } from "@fortawesome/free-regular-svg-icons"
+import {
+  faBuilding,
+  faEnvelope,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons"
 
 import Nav from "./nav"
 import Footer from "./footer"
@@ -25,7 +30,10 @@ library.add(
   faFacebookSquare,
   faTwitter,
   faHandshake,
-  faUser
+  faUser,
+  faBuilding,
+  faEnvelope,
+  faPhoneAlt
 )
 
 const theme = {
@@ -56,8 +64,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  h1 {
-    margin: 0;
+  h2 {
+    font-size: 42px;
+    margin-top: 30px;
+  }
+
+  h1, h2 {
     letter-spacing: 2px;
 
     @media ${device.tablet} {

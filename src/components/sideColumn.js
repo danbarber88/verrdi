@@ -33,6 +33,10 @@ const Container = styled.aside`
     width: 100%;
     padding: 0 30px;
   }
+
+  @media ${device.mobileL} {
+    padding: 0 15px;
+  }
 `
 
 const StyledImg = styled(Img)`
