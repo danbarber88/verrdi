@@ -8,33 +8,8 @@ import { device } from "../utils/device"
 import Banner from "../components/banner"
 import SideColumn from "../components/sideColumn"
 import Map from "../components/map"
+import { Container, Content } from "../components/containers"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
-const Container = styled.div`
-  max-width: 1275px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  padding: 40px 15px;
-
-  @media ${device.tablet} {
-    flex-wrap: wrap;
-    padding: 40px 15px 15px 15px;
-  }
-`
-
-const Content = styled.section`
-  max-width: 830px;
-  padding-right: 45px;
-
-  @media ${device.laptop} {
-    padding-right: 20px;
-  }
-
-  @media ${device.tablet} {
-    padding-right: 0;
-  }
-`
 
 const ContactDetails = styled.div`
   width: 90%;

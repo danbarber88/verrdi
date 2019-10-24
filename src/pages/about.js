@@ -7,32 +7,7 @@ import SEO from "../components/seo"
 import { device } from "../utils/device"
 import Banner from "../components/banner"
 import SideColumn from "../components/sideColumn"
-
-const Container = styled.div`
-  max-width: 1275px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  padding: 40px 15px;
-
-  @media ${device.tablet} {
-    flex-wrap: wrap;
-    padding: 40px 15px 15px 15px;
-  }
-`
-
-const Content = styled.section`
-  max-width: 830px;
-  padding-right: 45px;
-
-  @media ${device.laptop} {
-    padding-right: 20px;
-  }
-
-  @media ${device.tablet} {
-    padding-right: 0;
-  }
-`
+import { Container, Content } from "../components/containers"
 
 const StyledImg = styled(Img)`
   width: 100%;
