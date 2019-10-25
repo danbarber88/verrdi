@@ -38,11 +38,13 @@ const TextContainer = styled.div`
   }
 `
 
-const Title = styled.h3`
+const Title = styled(Link)`
   font-size: 22px;
   font-weight: 600;
   line-height: 24px;
   margin: 0;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
 `
 
 const PostedDate = styled.p`
@@ -64,7 +66,7 @@ const NewsItemLink = ({ slug, img, title, date, excerpt }) => (
 
     <TextContainer>
       <div>
-        <Title>{title}</Title>
+        <Title to={`/${slug}/`}>{title}</Title>
         <PostedDate>{date}</PostedDate>
       </div>
       <div

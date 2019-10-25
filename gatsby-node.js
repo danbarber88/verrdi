@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const newsPageTemplate = path.resolve("src/templates/news.js")
+    const newsItemPageTemplate = path.resolve("src/templates/newsItem.js")
     return graphql(`
       {
         allContentfulNewsItem(
@@ -18,7 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then(async result => {
       if (result.errors) {
         reject(result.errors)
       }
@@ -38,8 +39,19 @@ exports.createPages = ({ graphql, actions }) => {
             currentPage: i + 1,
           },
         })
-        resolve()
       })
+
+      await result.data.allContentfulNewsItem.edges.forEach(edge => {
+        createPage({
+          path: `${edge.node.slug}/`,
+          component: newsItemPageTemplate,
+          context: {
+            slug: edge.node.slug,
+          },
+        })
+      })
+
+      resolve()
     })
   })
 }

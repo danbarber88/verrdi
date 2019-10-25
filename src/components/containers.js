@@ -8,6 +8,7 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   padding: 40px 15px;
 
   @media ${device.tablet} {

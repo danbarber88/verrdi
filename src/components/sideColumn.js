@@ -7,7 +7,6 @@ import { device } from "../utils/device"
 const Container = styled.aside`
   width: 400px;
   min-width: 280px;
-  margin: 0 auto;
   padding: 0 30px;
   background-color: #f1f1f1;
 
