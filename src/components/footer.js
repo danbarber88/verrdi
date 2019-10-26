@@ -5,6 +5,7 @@ import Logo from "../images/footer-logo.svg"
 import BottomLogo from "../images/footer-bottom-logo.svg"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import RecentNews from "./recentNews"
 
 const Wrapper = styled.footer`
   width: 100%;
@@ -28,39 +29,6 @@ const Container = styled.div`
 
   @media ${device.tablet} {
     width: 425px;
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-  }
-`
-
-const RecentNews = styled.div`
-  width: 400px;
-
-  h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin: 0 0 40px 0;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    width: 100%;
-    font-size: 14px;
-  }
-
-  li {
-    border-bottom: 2px solid ${props => props.theme.yellow};
-    padding: 10px 0;
-    margin: 0;
-  }
-
-  @media ${device.tablet} {
-    h2 {
-      margin-top: 75px;
-    }
   }
 
   @media ${device.mobileL} {
@@ -184,16 +152,9 @@ const Footer = () => (
         <p>Company Number: 12041302</p>
         <p>Consortium Member: AC01885</p>
       </div>
-      <RecentNews>
-        <h2>Recent News</h2>
-        <ul>
-          <li>Transport Management Training Courses</li>
-          <li>Transport Management Training In Hull</li>
-          <li>CPC Training Courses Near Me</li>
-          <li>Affordable CPC Training Courses In Hull</li>
-          <li>International Haulage Training Courses</li>
-        </ul>
-      </RecentNews>
+
+      <RecentNews />
+
       <Bottom>
         <Copyright>
           <span>
