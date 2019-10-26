@@ -160,7 +160,7 @@ const ContactPage = ({ data }) => (
           capicola fatback pancetta t-bone filet mignon.
         </p>
       </Content>
-      <SideColumn faq cpc>
+      <SideColumn links docs cpc>
         <MapContainer>
           <Map />
         </MapContainer>

@@ -13,6 +13,7 @@ const Button = styled(Link)`
   font-weight: bold;
   text-decoration: none;
   min-width: 124px;
+  margin: ${props => props.margin};
 `
 
 export default Button

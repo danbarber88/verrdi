@@ -84,7 +84,7 @@ const NewsPage = ({ data, pageContext }) => {
             )}
           </PageControls>
         </Content>
-        <SideColumn info faq cpc></SideColumn>
+        <SideColumn links docs cpc></SideColumn>
       </Container>
     </Layout>
   )

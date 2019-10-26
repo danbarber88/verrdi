@@ -62,25 +62,51 @@ const SideColumn = props => {
     <Container>
       {props.children}
 
-      {props.info && (
+      {props.links && (
         <>
-          <h2>Useful Information</h2>
-          <a>Joining Instructions</a>
-          <a>Training Terms & Conditions</a>
-          <a>Example CPC Course Schedule</a>
-          <a>Driver CPC Information Guide</a>
-          <a>Digital Tachograph Information Form</a>
+          <h2>Useful Links</h2>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Jaupt Website
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Gov CPC
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            DVLA
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Verrdi Facebook Page
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Leave a Review (Google)
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Leave a Review (Facebook)
+          </a>
         </>
       )}
 
-      {props.faq && (
+      {props.docs && (
         <>
-          <h2>F.A.Q</h2>
-          <a>Joining Instructions</a>
-          <a>Training Terms & Conditions</a>
-          <a>Example CPC Course Schedule</a>
-          <a>Driver CPC Information Guide</a>
-          <a>Digital Tachograph Information Form</a>
+          <h2>Useful Documents</h2>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Joining Instructions
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Terms of Business
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            CPC Course Schedule
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Refer a friend
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Tachograph Rules (Site)
+          </a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
+            Tachograph Rules (PDF Document)
+          </a>
         </>
       )}
 

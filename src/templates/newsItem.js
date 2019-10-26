@@ -34,7 +34,7 @@ const NewsPage = ({ data }) => (
           }}
         />
       </Content>
-      <SideColumn info faq cpc></SideColumn>
+      <SideColumn links docs cpc></SideColumn>
     </Container>
   </Layout>
 )

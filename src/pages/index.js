@@ -104,18 +104,37 @@ const IndexPage = () => (
     <MainBanner />
     <TrainingSection>
       <h1>Driver CPC Training</h1>
-      <SubHeader>Yorkshire & North Lincolnshire</SubHeader>
+      <SubHeader>Yorkshire & Lincolnshire</SubHeader>
       <p>
-        Verrdi offers driver cpc training at multiple venues across Yorkshire
-        and Lincolnshire. Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor.
+        Here at Verrdi we want to make your Driver CPC course to be as a
+        pleasurable experience as we possibly can. Whilst we understand these
+        courses may be met with some frustration it is as we know a necessity to
+        continue your periodic vocational training to allow you to drive
+        commercially.
+      </p>
+      <p>
+        As ex-drivers ourselves we know that, you as an experienced driver will
+        know the subjects we are required to cover, but there may well be things
+        you have forgotten over time and all we want to do is refresh
+        information you already know, in a light hearted, respectful and
+        conversational style. Whereby everyone gets an opportunity to add
+        valuable input into the sessions.
+      </p>
+      <p>
+        Driver CPC training courses will be offered in a variety of comfortable
+        locations across Yorkshire & Lincolnshire, offering you the convenience
+        to train with us at a place and time to suite you.
+      </p>
+      <p>
+        Periodic CPC Training is usually delivered in 7 hour blocks to offer
+        flexibility around your already busy work schedule, which then has to be
+        balanced with your precious family time.
       </p>
       <ButtonContainer>
-        <StyledButton to="/booking">Book now</StyledButton>
-        <LearnMore to="/contact">Learn More</LearnMore>
+        <StyledButton to="/periodic-driver-cpc-training/">
+          Learn More
+        </StyledButton>
+        <LearnMore to="/contact/">Contact Us</LearnMore>
       </ButtonContainer>
     </TrainingSection>
     <FlexibleServiceSection>
@@ -127,12 +146,31 @@ const IndexPage = () => (
         <CardContent>
           <h2>Drivers</h2>
           <p>
-            Discount for early booking, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.
+            If you are an Agency, Ltd Co. Driver, or an owner operator
+            responsible for organising your CPC Training we have a number of
+            courses planned throughout {new Date().getFullYear()} -{" "}
+            {new Date().getFullYear() + 1} to offer you flexible, convenient &
+            comfortable locations.
           </p>
-          <Button to="/bd">Remind Me</Button>
+          <p>
+            Whether you plan to do one session at a time or an intensive course
+            we offer various discounts for loyal customers.{" "}
+          </p>
+          <p>
+            If you are new to the industry and needing your first CPC Modules do
+            not hesitate to enquire about our taster CPC sessions.
+          </p>
+          <p>
+            The more experienced colleagues who may be thinking staying in the
+            industry is no longer worth it to them we need you to stay and pass
+            on all that knowledge & know how. Please talk to us to discuss how
+            we at Verrdi would like to thank you and show our appreciation for
+            your time spent in serving the Haulage Industry.
+          </p>
+          <Button margin="0 10px 0 0" to="/booking/">
+            Book Now
+          </Button>
+          <Button to="/bd">Call me back</Button>
         </CardContent>
       </Card>
       <Card>
@@ -140,15 +178,27 @@ const IndexPage = () => (
           <CardIcon icon={["far", "handshake"]} />
         </IconContainer>
         <CardContent>
-          <h2>Business</h2>
+          <h2>Hauliers</h2>
           <p>
-            Discount for volume, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation. eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation.
+            If you are a Haulier running a busy fleet of vehicles and value your
+            drivers development and want to organise their vocational training
+            for them we can offer cost effective courses around your operational
+            needs.
           </p>
-          <Button to="/bd">Learn More</Button>
+          <p>
+            We can offer bespoke training either at your premises, a comfortable
+            location off site specifically for your team or drivers can be
+            included onto one of our courses pre booked throughout{" "}
+            {new Date().getFullYear()} - {new Date().getFullYear() + 1}
+          </p>
+          <p>
+            Please feel free to call us so we can discuss your requirements face
+            to face and arrange a cost effective solution.
+          </p>
+          <Button margin="0 10px 0 0" to="/contact/">
+            Talk to us
+          </Button>
+          <Button to="/bd">Call me back</Button>
         </CardContent>
       </Card>
     </FlexibleServiceSection>

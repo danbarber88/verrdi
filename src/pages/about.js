@@ -14,45 +14,57 @@ const StyledImg = styled(Img)`
   margin: 40px 0;
 `
 
+const Garry = styled.p`
+  font-weight: 500;
+  color: ${props => props.theme.green};
+`
+
 const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="About" />
-    <Banner textWidth="505px" img={data.bannerImg.childImageSharp.fluid}>
+    <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
-        We are dedicated to offering{" "}
-        <span className="yellow-text">the best training experience</span>{" "}
-        possible.
+        We aim to deliver quality training courses in a{" "}
+        <span className="yellow-text">professional</span>,{" "}
+        <span className="yellow-text">informative</span> and{" "}
+        <span className="yellow-text">enjoyable</span> environment.
       </p>
     </Banner>
     <Container>
       <Content>
-        <h1>About Us</h1>
-        <StyledImg fluid={data.hqImg.childImageSharp.fluid} />
+        <h1>A Bit About Me</h1>
+        {/* <StyledImg fluid={data.bannerLogo.childImageSharp.fluid} /> */}
         <p>
-          Bacon ipsum dolor amet spare ribs short ribs picanha short loin.
-          Shoulder leberkas beef flank. Chuck bacon pancetta, tenderloin
-          hamburger ground round burgdoggen tri-tip jerky kielbasa jowl brisket
-          capicola. Corned beef capicola venison, tri-tip tail ribeye cupim
-          bacon leberkas swine filet mignon pork belly chicken. Turducken
-          shankle kielbasa pancetta. Burgdoggen bacon short loin, fatback swine
-          brisket buffalo.
+          I have been involved in the transport industry since 1993, passing my
+          LGV Cat C licence courtesy of the Humberside Army Cadet Force. Soon
+          after I was lucky enough to be given opportunities to prove myself
+          with a number of hauliers around Hull resulting in been offered a Full
+          Time Position in 1995 where I also upskilled to my Cat CE Licence and
+          drove Wagon & Drag vehicles until 2000.
         </p>
         <p>
-          Pork shoulder short loin beef short ribs swine andouille. Tail beef
-          ribs filet mignon, shankle leberkas pancetta swine shank ball tip pork
-          spare ribs rump. Kielbasa leberkas sausage, spare ribs kevin sirloin
-          landjaeger swine fatback tri-tip shank tenderloin capicola ham. Short
-          loin kevin filet mignon porchetta tail pork doner buffalo. Drumstick
-          pork chop alcatra buffalo.
+          At that point I decided to go back to agencies and also pursue a
+          number of qualifications including my National CPC Certificate which
+          cumulated in starting a new career joining a national employment
+          agency as a "Trainee" Driving Consultant in 2003. During this time I
+          have enjoyed a great career within both the recruitment and the
+          haulage industries which has brought me to where I am today.
         </p>
         <p>
-          Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
-          cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
-          pig pork belly filet mignon salami tenderloin, cow cupim. Salami
-          capicola fatback pancetta t-bone filet mignon.
+          I look forward to working with drivers, discussing our joint knowledge
+          whilst delivering Driver CPC Courses.
         </p>
+        <p>
+          New training courses will become available relevant to the Driving &
+          Warehousing Industries throughout 2020.
+        </p>
+        <p>
+          Please do not hesitate to contact me if you have any questions or just
+          need a bit of advice.
+        </p>
+        <Garry>- Garry Barber</Garry>
       </Content>
-      <SideColumn info faq cpc />
+      <SideColumn links docs cpc />
     </Container>
   </Layout>
 )
@@ -66,9 +78,9 @@ export const query = graphql`
         }
       }
     }
-    hqImg: file(relativePath: { eq: "verrdi-hq.png" }) {
+    bannerLogo: file(relativePath: { eq: "about-banner-logo.png" }) {
       childImageSharp {
-        fluid(quality: 100, maxHeight: 350) {
+        fluid(quality: 100, maxHeight: 310) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

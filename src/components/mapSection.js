@@ -103,15 +103,15 @@ const MapSection = () => (
     <TextContainer>
       <h1>
         Verrdi offers multiple training locations across <span>Yorkshire</span>{" "}
-        and <span>North Lincolnshire</span>
+        and <span>Lincolnshire</span>
       </h1>
       <p>
-        Verrdi offers driver cpc training at multiple venues across Yorkshire
-        and Lincolnshire. Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor.
+        Verrdi Transport Support Services offers Driver CPC Training by friendly
+        knowledgeable & experienced trainers, primarily across Yorkshire &
+        Lincolnshire but we can offer a nationwide service if required. All
+        training venues are chosen for ease of access, free parking and
+        comfortable surroundings, with refreshments and snacks provided as a
+        minimum at each training session.
       </p>
     </TextContainer>
     <MapContainer>
