@@ -56,11 +56,11 @@ const GlobalStyle = createGlobalStyle`
     
 
     @media ${device.tablet} {
-      margin-top: 95px;
+      margin-top: 90.33px;
     }
 
     @media ${device.mobileL} {
-      margin-top: 85px;
+      margin-top: 83.47px;
     }
   }
 

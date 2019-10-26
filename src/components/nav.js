@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Logo from "../images/logo.svg"
+import Logo from "../images/nav-logo.svg"
 import Hamburger from "../images/hamburger.svg"
 import Button from "./button"
 
@@ -36,13 +36,16 @@ const Wrapper = styled.div`
 `
 
 const StyledLogo = styled(Logo)`
+  margin-right: 15px;
+  width: 280px;
+  height: auto;
+
   @media ${device.tablet} {
-    width: auto;
-    height: 55px;
+    width: 220px;
   }
 
   @media ${device.mobileL} {
-    height: 45px;
+    width: 190px;
   }
 `
 
@@ -173,7 +176,7 @@ class Nav extends Component {
 
           <MobileLinkContainer navOpen={this.state.navOpen}>
             <MobileNavItem className="book-now" navOpen={this.state.navOpen}>
-              <Link to="/booking">Book Now</Link>
+              <Link to="/booking/">Book Now</Link>
             </MobileNavItem>
 
             <MobileNavItem navOpen={this.state.navOpen}>
@@ -181,15 +184,15 @@ class Nav extends Component {
             </MobileNavItem>
 
             <MobileNavItem navOpen={this.state.navOpen}>
-              <Link to="/about">About</Link>
+              <Link to="/about/">About</Link>
             </MobileNavItem>
 
             <MobileNavItem navOpen={this.state.navOpen}>
-              <Link to="/news">News</Link>
+              <Link to="/news/">News</Link>
             </MobileNavItem>
 
             <MobileNavItem navOpen={this.state.navOpen}>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact/">Contact</Link>
             </MobileNavItem>
           </MobileLinkContainer>
 
@@ -197,13 +200,13 @@ class Nav extends Component {
             <StyledLink to="/" activeClassName="active">
               Home
             </StyledLink>
-            <StyledLink to="/about" activeClassName="active">
+            <StyledLink to="/about/" activeClassName="active">
               About
             </StyledLink>
-            <StyledLink to="/news" activeClassName="active">
+            <StyledLink to="/news/" activeClassName="active">
               News
             </StyledLink>
-            <StyledLink to="/contact" activeClassName="active">
+            <StyledLink to="/contact/" activeClassName="active">
               Contact
             </StyledLink>
             <StyledButton green={true ? 1 : 0} to="/booking">
