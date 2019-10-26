@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { device } from "../utils/device"
-import Logo from "../images/logo.svg"
+import Logo from "../images/footer-logo.svg"
+import BottomLogo from "../images/footer-bottom-logo.svg"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -69,16 +70,13 @@ const RecentNews = styled.div`
 
 const StyledLogo = styled(Logo)`
   margin-bottom: 30px;
-
-  .verrdi-logo-text {
-    fill: #fff;
-  }
 `
 
 const Email = styled.a`
   display: block;
   color: ${props => props.theme.yellow};
   margin-top: 30px;
+  text-decoration: none;
 `
 
 const Phone = styled.a`
@@ -143,6 +141,24 @@ const Copyright = styled.div`
     justify-content: center;
     order: 1;
   }
+
+  @media ${device.tablet} {
+    .tablet-hide {
+      display: none;
+    }
+  }
+`
+
+const StyledBottomLogo = styled(BottomLogo)`
+  margin-bottom: -7.5px;
+
+  @media ${device.tablet} {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+  }
 `
 
 const IconContainer = styled.div`
@@ -181,8 +197,9 @@ const Footer = () => (
       <Bottom>
         <Copyright>
           <span>
-            © {new Date().getFullYear()} Verrdi Training & Recruitment Ltd
-            <span> | </span>
+            <StyledBottomLogo /> © {new Date().getFullYear()} Verrdi Transport
+            Support Services Ltd
+            <span className="tablet-hide"> | </span>
             <br />
             <Link to="/cookie-policy" className="policy-link">
               Cookie Policy
