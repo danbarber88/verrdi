@@ -51,7 +51,6 @@ const RecentNews = () => {
   return (
     <Container>
       <h2>Recent News</h2>
-      {console.log(data)}
       {data.allContentfulNewsItem.edges.map((item, i) => (
         <StyledLink key={i} to={item.node.slug}>
           {item.node.title}
