@@ -33,7 +33,6 @@ const AboutPage = ({ data }) => (
     <Container>
       <Content>
         <h1>A Bit About Me</h1>
-        {/* <StyledImg fluid={data.bannerLogo.childImageSharp.fluid} /> */}
         <p>
           I have been involved in the transport industry since 1993, passing my
           LGV Cat C licence courtesy of the Humberside Army Cadet Force. Soon
@@ -74,13 +73,6 @@ export const query = graphql`
     bannerImg: file(relativePath: { eq: "about-banner.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxHeight: 350) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    bannerLogo: file(relativePath: { eq: "about-banner-logo.png" }) {
-      childImageSharp {
-        fluid(quality: 100, maxHeight: 310) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

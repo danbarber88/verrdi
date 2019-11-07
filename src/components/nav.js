@@ -209,7 +209,7 @@ class Nav extends Component {
             <StyledLink to="/contact/" activeClassName="active">
               Contact
             </StyledLink>
-            <StyledButton green={true ? 1 : 0} to="/booking">
+            <StyledButton green={true ? 1 : 0} to="/booking/">
               Book now
             </StyledButton>
           </LinkContainer>
