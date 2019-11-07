@@ -18,7 +18,7 @@ export const Container = styled.div`
 `
 
 export const Content = styled.section`
-  max-width: 830px;
+  width: 830px;
   padding-right: 45px;
 
   @media ${device.laptop} {

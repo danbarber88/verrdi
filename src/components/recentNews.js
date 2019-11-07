@@ -52,7 +52,7 @@ const RecentNews = () => {
     <Container>
       <h2>Recent News</h2>
       {data.allContentfulNewsItem.edges.map((item, i) => (
-        <StyledLink key={i} to={item.node.slug}>
+        <StyledLink key={i} to={`/${item.node.slug}/`}>
           {item.node.title}
         </StyledLink>
       ))}
