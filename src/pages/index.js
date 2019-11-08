@@ -199,8 +199,8 @@ const IndexPage = () => (
             Please feel free to call us so we can discuss your requirements face
             to face and arrange a cost effective solution.
           </p>
-          <Button margin="0 10px 0 0" to="/contact/">
-            Talk to us
+          <Button margin="0 10px 0 0" to="/haulier-information/">
+            More Information
           </Button>
           <Button to="/bd">Call me back</Button>
         </CardContent>
