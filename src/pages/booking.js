@@ -13,12 +13,10 @@ import Events from "../components/events"
 const BookingPage = ({ data }) => (
   <Layout>
     <SEO title="Book Now" />
-    <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
+    <Banner textWidth="510px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
-        We aim to deliver quality training courses in a{" "}
-        <span className="yellow-text">professional</span>,{" "}
-        <span className="yellow-text">informative</span> and{" "}
-        <span className="yellow-text">enjoyable</span> environment.
+        Don’t put the brakes on your{" "}
+        <span className="yellow-text">periodic Driver CPC training</span>!
       </p>
     </Banner>
     <Container>
@@ -33,7 +31,7 @@ const BookingPage = ({ data }) => (
 
 export const query = graphql`
   query BookingPageQuery {
-    bannerImg: file(relativePath: { eq: "about-banner.jpg" }) {
+    bannerImg: file(relativePath: { eq: "booking-banner.png" }) {
       childImageSharp {
         fluid(quality: 100, maxHeight: 350) {
           ...GatsbyImageSharpFluid_withWebp
