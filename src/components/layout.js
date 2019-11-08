@@ -84,6 +84,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 14px;
     }
   }
+
+  #SignupForm_0 {
+    height: 100%;
+  }
 `
 
 const Layout = ({ children }) => {
