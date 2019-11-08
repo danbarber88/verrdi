@@ -18,6 +18,7 @@ import {
   faBuilding,
   faEnvelope,
   faPhoneAlt,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons"
 
 import Nav from "./nav"
@@ -33,7 +34,8 @@ library.add(
   faUser,
   faBuilding,
   faEnvelope,
-  faPhoneAlt
+  faPhoneAlt,
+  faSpinner
 )
 
 const theme = {
