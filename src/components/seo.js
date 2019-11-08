@@ -64,21 +64,6 @@ function SEO({ description, lang, meta, title }) {
       <script id="mcjs">
         {`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ea339dabdb1164aa7e80038fd/6c25518c5f68fb75c11670b24.js");`}
       </script>
-      <script
-        type="text/javascript"
-        src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
-        data-dojo-config="usePlainJson: true, isDebug: false"
-      ></script>
-      <script type="text/javascript">
-        {`window.dojoRequire(["mojo/signup-forms/Loader"], function(L){" "}
-        {L.start({
-          baseUrl: "mc.us3.list-manage.com",
-          uuid: "ea339dabdb1164aa7e80038fd",
-          lid: "af43038a16",
-          uniqueMethods: true,
-        })}
-        )`}
-      </script>
     </Helmet>
   )
 }
