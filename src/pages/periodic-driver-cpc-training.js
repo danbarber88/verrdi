@@ -19,7 +19,7 @@ const PeriodicDriverCPCTrainingPage = ({ data }) => (
     </Banner>
     <Container>
       <Content>
-        <h1>What is Driver CPC? </h1>
+        <h1>What is Driver CPC?</h1>
         <p>
           The most important thing to know is that professional bus, coach and
           lorry drivers(vehicles over 3.5t) are now required to hold a Driver

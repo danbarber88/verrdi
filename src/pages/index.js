@@ -10,6 +10,10 @@ import { device } from "../utils/device"
 import MapSection from "../components/mapSection"
 import Reviews from "../components/reviews"
 
+const Header2 = styled.h2`
+  font-size: 28px;
+`
+
 const TrainingSection = styled.section`
   max-width: 850px;
   text-align: center;
@@ -33,11 +37,9 @@ const ButtonContainer = styled.div`
   margin-top: 50px;
 `
 
-const StyledButton = styled(Button)`
-  margin-right: 30px;
-`
-
 const LearnMore = styled(Link)`
+  display: block;
+  margin: 15px 0;
   text-decoration: none;
   color: ${props => props.theme.headerGray};
   font-weight: 600;
@@ -105,6 +107,17 @@ const IndexPage = () => (
     <TrainingSection>
       <h1>Driver CPC Training</h1>
       <SubHeader>Yorkshire & Lincolnshire</SubHeader>
+      <Header2>What is Driver CPC?</Header2>
+      <p>
+        The most important thing to know is that professional bus, coach and
+        lorry drivers (vehicles over 3.5t) are now required to hold a Driver CPC
+        (Certificate of Professional Competence) licence in addition to a
+        vocational driving licence. So whether you’re coming into the industry
+        new, are an existing driver or are responsible for a fleet of drivers,
+        it is imperative that you are aware of how to comply with Driver CPC
+        legislation and the correct licensing of drivers.
+      </p>
+      <Header2>Why choose Verrdi?</Header2>
       <p>
         Here at Verrdi we want to make your Driver CPC course to be as a
         pleasurable experience as we possibly can. Whilst we understand these
@@ -131,9 +144,7 @@ const IndexPage = () => (
         balanced with your precious family time.
       </p>
       <ButtonContainer>
-        <StyledButton to="/periodic-driver-cpc-training/">
-          Learn More
-        </StyledButton>
+        <Button to="/periodic-driver-cpc-training/">CPC Information</Button>
         <LearnMore to="/contact/">Contact Us</LearnMore>
       </ButtonContainer>
     </TrainingSection>
@@ -160,15 +171,8 @@ const IndexPage = () => (
             If you are new to the industry and needing your first CPC Modules do
             not hesitate to enquire about our taster CPC sessions.
           </p>
-          <p>
-            The more experienced colleagues who may be thinking staying in the
-            industry is no longer worth it to them we need you to stay and pass
-            on all that knowledge & know how. Please talk to us to discuss how
-            we at Verrdi would like to thank you and show our appreciation for
-            your time spent in serving the Haulage Industry.
-          </p>
-          <Button margin="0 10px 0 0" to="/booking/">
-            Book Now
+          <Button margin="0 10px 0 0" to="/driver-information/">
+            More Information
           </Button>
           <Button to="/bd">Call me back</Button>
         </CardContent>
