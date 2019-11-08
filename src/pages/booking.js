@@ -1,10 +1,7 @@
 import React from "react"
-import styled from "styled-components"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { device } from "../utils/device"
 import Banner from "../components/banner"
 import SideColumn from "../components/sideColumn"
 import { Container, Content } from "../components/containers"
@@ -15,8 +12,8 @@ const BookingPage = ({ data }) => (
     <SEO title="Book Now" />
     <Banner textWidth="510px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
-        Don’t put the brakes on your{" "}
-        <span className="yellow-text">periodic Driver CPC training</span>!
+        Don’t put the brakes on your periodic{" "}
+        <span className="yellow-text">Driver CPC training</span>!
       </p>
     </Banner>
     <Container>

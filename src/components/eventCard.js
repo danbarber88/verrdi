@@ -141,7 +141,7 @@ class EventCard extends Component {
 
     return (
       <Container>
-        <Image src={this.props.image} />
+        {this.props.image && <Image src={this.props.image} />}
         <TextContainer>
           <Name>{this.props.name}</Name>
           <CourseDate>{dayOfMonth}</CourseDate>

@@ -10,6 +10,7 @@ import SideColumn from "../components/sideColumn"
 import Map from "../components/map"
 import { Container, Content } from "../components/containers"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import MailChimpForm from "../components/mailChimpForm"
 
 const ContactDetails = styled.div`
   width: 90%;
@@ -127,12 +128,7 @@ const ContactPage = ({ data }) => (
         <h2>
           Not ready to book yet but want to be kept informed of future courses?
         </h2>
-        <p>
-          Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
-          cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
-          pig pork belly filet mignon salami tenderloin, cow cupim. Salami
-          capicola fatback pancetta t-bone filet mignon.
-        </p>
+        <MailChimpForm />
       </Content>
       <SideColumn links docs cpc>
         <MapContainer>

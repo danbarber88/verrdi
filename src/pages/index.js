@@ -77,6 +77,10 @@ const Card = styled.div`
     font-size: 36px;
   }
 
+  .top-margin {
+    margin-top: 23px;
+  }
+
   @media ${device.tablet} {
     h2 {
       font-size: 32px;
@@ -171,10 +175,10 @@ const IndexPage = () => (
             If you are new to the industry and needing your first CPC Modules do
             not hesitate to enquire about our taster CPC sessions.
           </p>
-          <Button margin="0 10px 0 0" to="/driver-information/">
+          <Button className="top-margin" marginRight to="/driver-information/">
             More Information
           </Button>
-          <Button to="/bd">Call me back</Button>
+          {/* <Button to="/bd">Call me back</Button> */}
         </CardContent>
       </Card>
       <Card>
@@ -199,10 +203,10 @@ const IndexPage = () => (
             Please feel free to call us so we can discuss your requirements face
             to face and arrange a cost effective solution.
           </p>
-          <Button margin="0 10px 0 0" to="/haulier-information/">
+          <Button marginRight to="/haulier-information/">
             More Information
           </Button>
-          <Button to="/bd">Call me back</Button>
+          {/* <Button to="/bd">Call me back</Button> */}
         </CardContent>
       </Card>
     </FlexibleServiceSection>

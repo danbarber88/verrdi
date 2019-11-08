@@ -1,6 +1,7 @@
 import "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { device } from "../utils/device"
 
 const Button = styled(Link)`
   display: inline-block;
@@ -13,7 +14,11 @@ const Button = styled(Link)`
   font-weight: bold;
   text-decoration: none;
   min-width: 124px;
-  margin: ${props => props.margin};
+  margin-right: ${props => (props.marginRight ? "10px" : 0)};
+
+  @media ${device.mobileL} {
+    margin-top: 10px;
+  }
 `
 
 export default Button
