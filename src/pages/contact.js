@@ -51,12 +51,8 @@ const ContactLinks = styled.a`
   display: block;
   margin-bottom: 1.45rem;
   color: ${props => props.theme.green};
+  text-decoration: none;
 `
-
-// const StyledImg = styled(Img)`
-//   width: 100%;
-//   margin: 40px 0;
-// `
 
 const MapContainer = styled.div`
   width: 100%;
@@ -98,13 +94,9 @@ const ContactPage = ({ data }) => (
         <h1>How to get in touch</h1>
         <ContactDetails>
           <div>
-            <Icon icon={["fa", "building"]} />
-            <ContactHeader>Address</ContactHeader>
-            <p>
-              123 Unknown Street
-              <br /> Hull
-              <br /> HU1 5TK
-            </p>
+            <Icon icon={["fa", "phone-alt"]} />
+            <ContactHeader>Phone</ContactHeader>
+            <ContactLinks href="tel:01482298119">01482 298119</ContactLinks>
           </div>
           <div>
             <Icon icon={["fa", "envelope"]} />
@@ -114,45 +106,27 @@ const ContactPage = ({ data }) => (
             </ContactLinks>
           </div>
           <div>
-            <Icon icon={["fa", "phone-alt"]} />
-            <ContactHeader>Phone</ContactHeader>
-            <ContactLinks href="tel:01482298119">01482 298119</ContactLinks>
+            <Icon icon={["fa", "building"]} />
+            <ContactHeader>Address</ContactHeader>
+            <p>
+              123 Unknown Street
+              <br /> Hull
+              <br /> HU1 5TK
+            </p>
           </div>
         </ContactDetails>
 
-        <h2>Are you a business looking to book in bulk?</h2>
-        <p>
-          Bacon ipsum dolor amet spare ribs short ribs picanha short loin.
-          Shoulder leberkas beef flank. Chuck bacon pancetta, tenderloin
-          hamburger ground round burgdoggen tri-tip jerky kielbasa jowl brisket
-          capicola. Corned beef capicola venison, tri-tip tail ribeye cupim
-          bacon leberkas swine filet mignon pork belly chicken. Turducken
-          shankle kielbasa pancetta. Burgdoggen bacon short loin, fatback swine
-          brisket buffalo.
-        </p>
-        <p>
-          Pork shoulder short loin beef short ribs swine andouille. Tail beef
-          ribs filet mignon, shankle leberkas pancetta swine shank ball tip pork
-          spare ribs rump. Kielbasa leberkas sausage, spare ribs kevin sirloin
-          landjaeger swine fatback tri-tip shank tenderloin capicola ham. Short
-          loin kevin filet mignon porchetta tail pork doner buffalo. Drumstick
-          pork chop alcatra buffalo.
-        </p>
+        <h2>Payment info</h2>
         <p>
           Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
           cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
           pig pork belly filet mignon salami tenderloin, cow cupim. Salami
           capicola fatback pancetta t-bone filet mignon.
         </p>
-        <h2>Drivers, book a course by phone or online</h2>
-        <p>
-          Pork shoulder short loin beef short ribs swine andouille. Tail beef
-          ribs filet mignon, shankle leberkas pancetta swine shank ball tip pork
-          spare ribs rump. Kielbasa leberkas sausage, spare ribs kevin sirloin
-          landjaeger swine fatback tri-tip shank tenderloin capicola ham. Short
-          loin kevin filet mignon porchetta tail pork doner buffalo. Drumstick
-          pork chop alcatra buffalo.
-        </p>
+
+        <h2>
+          Not ready to book yet but want to be kept informed of future courses?
+        </h2>
         <p>
           Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
           cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
@@ -165,12 +139,12 @@ const ContactPage = ({ data }) => (
           <Map />
         </MapContainer>
 
-        <h2>MailChimp email capture form here</h2>
+        {/* <h2>MailChimp email capture form here</h2>
         <form>
           <label>email</label>
           <input style={{ width: "100%" }}></input>
           <button style={{ marginTop: "10px" }}>submit</button>
-        </form>
+        </form> */}
       </SideColumn>
     </Container>
   </Layout>
