@@ -32,7 +32,17 @@ const AboutPage = ({ data }) => (
     </Banner>
     <Container>
       <Content>
-        <h1>A Bit About Me</h1>
+        <h1>About Verrdi</h1>
+        <p>
+          I believe EVERYONE who works with us wants to be treated in the same
+          professional manner regardless if you are a customer or supplier and
+          treated with the same respect & integrity that allows the company to
+          deliver a reliable, informative, professional service in such a way
+          you will want to become a loyal customer adding value to the business
+          and receive the best of attention at all times, making us the provider
+          of choice for all services offered by Verrdi now and in the future.
+        </p>
+        <h2>A Bit About Me</h2>
         <p>
           I have been involved in the transport industry since 1993, passing my
           LGV Cat C licence courtesy of the Humberside Army Cadet Force. Soon
