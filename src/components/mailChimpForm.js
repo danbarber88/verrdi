@@ -1,7 +1,37 @@
 import React from "react"
+import styled from "styled-components"
+import { device } from "../utils/device"
+
+const FormContainer = styled.div`
+  border-left: 15px solid ${props => props.theme.green};
+  background-color: #f1f1f1;
+
+  @media ${device.mobileL} {
+    border: none;
+  }
+
+  @media ${device.tablet} {
+    margin-bottom: 50px;
+  }
+`
+
+const Button = styled.input`
+  text-align: center;
+  padding: 7.5px 10px;
+  background-color: ${props => props.theme.green};
+  color: #fff;
+  border-radius: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 124px;
+
+  @media ${device.mobileL} {
+    width: 96%;
+  }
+`
 
 const MailChimpForm = () => (
-  <div id="mc_embed_signup">
+  <FormContainer id="mc_embed_signup">
     <form
       action="https://verrdi.us3.list-manage.com/subscribe/post?u=ea339dabdb1164aa7e80038fd&amp;id=af43038a16"
       method="post"
@@ -9,14 +39,14 @@ const MailChimpForm = () => (
       name="mc-embedded-subscribe-form"
       className="validate"
       target="_blank"
-      novalidate
+      noValidate
     >
       <div id="mc_embed_signup_scroll">
         <div className="indicates-required">
           <span className="asterisk">*</span> indicates required
         </div>
         <div className="mc-field-group">
-          <label for="mce-COURSE">
+          <label htmlFor="mce-COURSE">
             Course interested in <span className="asterisk">*</span>
           </label>
           <select name="COURSE" className="required" id="mce-COURSE">
@@ -24,27 +54,7 @@ const MailChimpForm = () => (
           </select>
         </div>
         <div className="mc-field-group">
-          <label for="mce-FNAME">
-            Forename <span className="asterisk">*</span>
-          </label>
-          <input type="text" name="FNAME" className="required" id="mce-FNAME" />
-        </div>
-        <div className="mc-field-group">
-          <label for="mce-LNAME">
-            Surname <span className="asterisk">*</span>
-          </label>
-          <input type="text" name="LNAME" className="required" id="mce-LNAME" />
-        </div>
-        <div className="mc-field-group size1of2">
-          <label for="mce-PHONE">Mobile Number </label>
-          <input type="text" name="PHONE" classN id="mce-PHONE" />
-        </div>
-        <div className="mc-field-group size1of2">
-          <label for="mce-PHONE_ALT">Alternate Number </label>
-          <input type="text" name="PHONE_ALT" className="" id="mce-PHONE_ALT" />
-        </div>
-        <div className="mc-field-group">
-          <label for="mce-EMAIL">
+          <label htmlFor="mce-EMAIL">
             Email Address <span className="asterisk">*</span>
           </label>
           <input
@@ -55,7 +65,44 @@ const MailChimpForm = () => (
           />
         </div>
         <div className="mc-field-group size1of2">
-          <label for="mce-CPC_EXPIRY-month">Date CPC Expires </label>
+          <label htmlFor="mce-FNAME">
+            Forename <span className="asterisk">*</span>
+          </label>
+          <input type="text" name="FNAME" className="required" id="mce-FNAME" />
+        </div>
+        <div className="mc-field-group size1of2">
+          <label htmlFor="mce-LNAME">
+            Surname <span className="asterisk">*</span>
+          </label>
+          <input type="text" name="LNAME" className="required" id="mce-LNAME" />
+        </div>
+        <div className="mc-field-group size1of2">
+          <label htmlFor="mce-PHONE">Mobile Number </label>
+          <input type="text" name="PHONE" id="mce-PHONE" />
+        </div>
+        <div className="mc-field-group size1of2">
+          <label htmlFor="mce-PHONE_ALT">Alternate Number </label>
+          <input type="text" name="PHONE_ALT" id="mce-PHONE_ALT" />
+        </div>
+        <div className="mc-field-group">
+          <label htmlFor="mce-group[26921]">
+            Status <span className="asterisk">*</span>
+          </label>
+          <select
+            name="group[26921]"
+            className="required REQ_CSS"
+            id="mce-group[26921]"
+          >
+            <option></option>
+            <option value="1">Employed Driver</option>
+            <option value="2">Agency Driver</option>
+            <option value="4">Owner Operator</option>
+            <option value="8">Self Employed / Ltd Co. Driver</option>
+            <option value="16">Haulier</option>
+          </select>
+        </div>
+        <div className="mc-field-group size1of2">
+          <label htmlFor="mce-CPC_EXPIRY-month">Date CPC Expires </label>
           <div className="datefield">
             <span className="subfield dayfield">
               <input
@@ -64,7 +111,7 @@ const MailChimpForm = () => (
                 pattern="[0-9]*"
                 placeholder="DD"
                 size="2"
-                maxlength="2"
+                maxLength="2"
                 name="CPC_EXPIRY[day]"
                 id="mce-CPC_EXPIRY-day"
               />
@@ -77,7 +124,7 @@ const MailChimpForm = () => (
                 pattern="[0-9]*"
                 placeholder="MM"
                 size="2"
-                maxlength="2"
+                maxLength="2"
                 name="CPC_EXPIRY[month]"
                 id="mce-CPC_EXPIRY-month"
               />
@@ -90,26 +137,13 @@ const MailChimpForm = () => (
                 pattern="[0-9]*"
                 placeholder="YYYY"
                 size="4"
-                maxlength="4"
+                maxLength="4"
                 name="CPC_EXPIRY[year]"
                 id="mce-CPC_EXPIRY-year"
               />
             </span>
             <span className="small-meta nowrap">( dd / mm / yyyy )</span>
           </div>
-        </div>
-        <div className="mc-field-group">
-          <label for="mce-STATUS">Status </label>
-          <select name="STATUS" className="" id="mce-STATUS">
-            <option></option>
-            <option value="Employed Driver">Employed Driver</option>
-            <option value="Agency Driver">Agency Driver</option>
-            <option value="Owner Operator">Owner Operator</option>
-            <option value="Self Employed / Ltd Co. Driver">
-              Self Employed / Ltd Co. Driver
-            </option>
-            <option value="Haulier">Haulier</option>
-          </select>
         </div>
         <div id="mce-responses" className="clear">
           <div
@@ -131,21 +165,15 @@ const MailChimpForm = () => (
           <input
             type="text"
             name="b_ea339dabdb1164aa7e80038fd_af43038a16"
-            tabindex="-1"
+            tabIndex="-1"
           />
         </div>
         <div className="clear">
-          <input
-            type="submit"
-            value="Subscribe"
-            name="subscribe"
-            id="mc-embedded-subscribe"
-            className="button"
-          />
+          <Button type="submit" value="Subscribe" name="subscribe" />
         </div>
       </div>
     </form>
-  </div>
+  </FormContainer>
 )
 
 export default MailChimpForm

@@ -175,7 +175,7 @@ const IndexPage = () => (
             If you are new to the industry and needing your first CPC Modules do
             not hesitate to enquire about our taster CPC sessions.
           </p>
-          <Button className="top-margin" marginRight to="/driver-information/">
+          <Button className="top-margin" to="/driver-information/">
             More Information
           </Button>
           {/* <Button to="/bd">Call me back</Button> */}
@@ -203,9 +203,7 @@ const IndexPage = () => (
             Please feel free to call us so we can discuss your requirements face
             to face and arrange a cost effective solution.
           </p>
-          <Button marginRight to="/haulier-information/">
-            More Information
-          </Button>
+          <Button to="/haulier-information/">More Information</Button>
           {/* <Button to="/bd">Call me back</Button> */}
         </CardContent>
       </Card>

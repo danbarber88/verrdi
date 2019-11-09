@@ -11,6 +11,7 @@ import Map from "../components/map"
 import { Container, Content } from "../components/containers"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import MailChimpForm from "../components/mailChimpForm"
+import useScript from "../hooks/useScript"
 
 const ContactDetails = styled.div`
   width: 90%;
@@ -81,70 +82,75 @@ const Icon = styled(FontAwesomeIcon)`
   margin: 20px;
 `
 
-const ContactPage = ({ data }) => (
-  <Layout>
-    <SEO title="Contact Us" />
-    <Banner textWidth="655px" img={data.bannerImg.childImageSharp.fluid}>
-      <p>
-        Get in touch for any reason. We can answer any and all of your{" "}
-        <span className="yellow-text">questions</span>.
-      </p>
-    </Banner>
-    <Container>
-      <Content>
-        <h1>How to get in touch</h1>
-        <ContactDetails>
-          <div>
-            <Icon icon={["fa", "phone-alt"]} />
-            <ContactHeader>Phone</ContactHeader>
-            <ContactLinks href="tel:01482298119">01482 298119</ContactLinks>
-          </div>
-          <div>
-            <Icon icon={["fa", "envelope"]} />
-            <ContactHeader>Email</ContactHeader>
-            <ContactLinks href="mailto:sales@verrdi.co.uk">
-              sales@verrdi.co.uk
-            </ContactLinks>
-          </div>
-          <div>
-            <Icon icon={["fa", "building"]} />
-            <ContactHeader>Address</ContactHeader>
-            <p>
-              123 Unknown Street
-              <br /> Hull
-              <br /> HU1 5TK
-            </p>
-          </div>
-        </ContactDetails>
+const ContactPage = ({ data }) => {
+  useScript("//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js")
 
-        <h2>Payment info</h2>
+  return (
+    <Layout>
+      <SEO title="Contact Us" />
+      <Banner textWidth="655px" img={data.bannerImg.childImageSharp.fluid}>
         <p>
-          Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
-          cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
-          pig pork belly filet mignon salami tenderloin, cow cupim. Salami
-          capicola fatback pancetta t-bone filet mignon.
+          Get in touch for any reason. We can answer any and all of your{" "}
+          <span className="yellow-text">questions</span>.
         </p>
+      </Banner>
+      <Container>
+        <Content>
+          <h1>How to get in touch</h1>
+          <ContactDetails>
+            <div>
+              <Icon icon={["fa", "phone-alt"]} />
+              <ContactHeader>Phone</ContactHeader>
+              <ContactLinks href="tel:01482298119">01482 298119</ContactLinks>
+            </div>
+            <div>
+              <Icon icon={["fa", "envelope"]} />
+              <ContactHeader>Email</ContactHeader>
+              <ContactLinks href="mailto:sales@verrdi.co.uk">
+                sales@verrdi.co.uk
+              </ContactLinks>
+            </div>
+            <div>
+              <Icon icon={["fa", "building"]} />
+              <ContactHeader>Address</ContactHeader>
+              <p>
+                123 Unknown Street
+                <br /> Hull
+                <br /> HU1 5TK
+              </p>
+            </div>
+          </ContactDetails>
 
-        <h2>
-          Not ready to book yet but want to be kept informed of future courses?
-        </h2>
-        <MailChimpForm />
-      </Content>
-      <SideColumn links docs cpc>
-        <MapContainer>
-          <Map />
-        </MapContainer>
+          <h2>Payment info</h2>
+          <p>
+            Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
+            cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
+            pig pork belly filet mignon salami tenderloin, cow cupim. Salami
+            capicola fatback pancetta t-bone filet mignon.
+          </p>
 
-        {/* <h2>MailChimp email capture form here</h2>
+          <h2>
+            Not ready to book yet but want to be kept informed of future
+            courses?
+          </h2>
+          <MailChimpForm />
+        </Content>
+        <SideColumn links docs cpc>
+          <MapContainer>
+            <Map />
+          </MapContainer>
+
+          {/* <h2>MailChimp email capture form here</h2>
         <form>
           <label>email</label>
           <input style={{ width: "100%" }}></input>
           <button style={{ marginTop: "10px" }}>submit</button>
         </form> */}
-      </SideColumn>
-    </Container>
-  </Layout>
-)
+        </SideColumn>
+      </Container>
+    </Layout>
+  )
+}
 
 export const query = graphql`
   query ContactPageQuery {
