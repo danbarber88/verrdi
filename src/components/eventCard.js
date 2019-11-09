@@ -174,9 +174,15 @@ class EventCard extends Component {
             </div>
             <ButtonAndPrice>
               <Price>£{this.props.price}</Price>
-              <Button href={this.props.url} target="_blank">
-                Book Course
-              </Button>
+              {this.props.placesRemaining === 0 ? (
+                <Button href={this.props.url} target="_blank">
+                  Details
+                </Button>
+              ) : (
+                <Button href={this.props.url} target="_blank">
+                  Book Course
+                </Button>
+              )}
             </ButtonAndPrice>
           </Info>
         </TextContainer>
