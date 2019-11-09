@@ -151,11 +151,17 @@ class EventCard extends Component {
             <div>
               <ul>
                 {this.props.placesRemaining <= 5 ? (
-                  <li>
-                    <span className="red">
-                      Only {this.props.placesRemaining} Places remaining
-                    </span>
-                  </li>
+                  this.props.placesRemaining === 0 ? (
+                    <li>
+                      <span className="red">SOLD OUT</span>
+                    </li>
+                  ) : (
+                    <li>
+                      <span className="red">
+                        Only {this.props.placesRemaining} Places remaining
+                      </span>
+                    </li>
+                  )
                 ) : (
                   <li>{this.props.placesRemaining} Places remaining</li>
                 )}
