@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const ImageLink = styled.div`
   width: 150px;
   height: 150px;
 `
@@ -65,9 +65,11 @@ const ReadMore = styled(Link)`
 
 const NewsItemLink = ({ slug, img, title, date, excerpt }) => (
   <Container>
-    <StyledLink to={`/${slug}/`}>
-      <StyledImg fluid={img} />
-    </StyledLink>
+    <ImageLink>
+      <Link to={`/${slug}/`}>
+        <StyledImg fluid={img} />
+      </Link>
+    </ImageLink>
 
     <TextContainer>
       <div>
