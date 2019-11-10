@@ -31,7 +31,8 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "styled-components": "^4.4.0",
-    "typography": "^0.16.19"
+    "typography": "^0.16.19",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
