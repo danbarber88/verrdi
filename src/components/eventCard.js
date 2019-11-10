@@ -123,53 +123,51 @@ const Price = styled.div`
   }
 `
 
-const EventCard = () => (
+const EventCard = ({ props }) => (
   <Container>
-    {this.props.image && <Image img={this.props.image} />}
+    {props.image && <Image img={props.image} />}
     <TextContainer>
-      <Name>{this.props.name}</Name>
-      <CourseDate>
-        {dayjs(this.props.startDate).format("dddd Do MMMM")}
-      </CourseDate>
+      <Name>{props.name}</Name>
+      <CourseDate>{dayjs(props.startDate).format("dddd Do MMMM")}</CourseDate>
       <CourseTime>
-        {dayjs(this.props.startDate).format("h:mma") +
+        {dayjs(props.startDate).format("h:mma") +
           " - " +
-          dayjs(this.props.endDate).format("h:mma")}
+          dayjs(props.endDate).format("h:mma")}
       </CourseTime>
       <Spacer />
       <Info>
         <div>
           <ul>
-            {this.props.placesRemaining <= 5 ? (
-              this.props.placesRemaining === 0 ? (
+            {props.placesRemaining <= 5 ? (
+              props.placesRemaining === 0 ? (
                 <li>
                   <span className="red">SOLD OUT</span>
                 </li>
               ) : (
                 <li>
                   <span className="red">
-                    Only {this.props.placesRemaining} Places remaining
+                    Only {props.placesRemaining} Places remaining
                   </span>
                 </li>
               )
             ) : (
-              <li>{this.props.placesRemaining} Places remaining</li>
+              <li>{props.placesRemaining} Places remaining</li>
             )}
             <li>
-              {this.props.street}, <br />
-              {this.props.city}, {this.props.postCode}
+              {props.street}, <br />
+              {props.city}, {props.postCode}
             </li>
             <li>Free onsite parking</li>
           </ul>
         </div>
         <ButtonAndPrice>
-          <Price>£{this.props.price}</Price>
-          {this.props.placesRemaining === 0 ? (
-            <Button href={this.props.url} target="_blank">
+          <Price>£{props.price}</Price>
+          {props.placesRemaining === 0 ? (
+            <Button href={props.url} target="_blank">
               Details
             </Button>
           ) : (
-            <Button href={this.props.url} target="_blank">
+            <Button href={props.url} target="_blank">
               Book Course
             </Button>
           )}
