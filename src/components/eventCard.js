@@ -15,8 +15,12 @@ const Container = styled.div`
   }
 `
 
-const Image = styled.img`
-  width: 300px;
+const Image = styled.div`
+  background: ${props => `url(${props.img})`};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
   margin: 0;
   border-radius: 10px 0 0 10px;
 
@@ -141,7 +145,7 @@ class EventCard extends Component {
 
     return (
       <Container>
-        {this.props.image && <Image src={this.props.image} />}
+        {this.props.image && <Image img={this.props.image} />}
         <TextContainer>
           <Name>{this.props.name}</Name>
           <CourseDate>{dayOfMonth}</CourseDate>
