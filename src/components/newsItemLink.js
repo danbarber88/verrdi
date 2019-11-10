@@ -17,8 +17,14 @@ const Container = styled.div`
 `
 
 const ImageLink = styled.div`
-  width: 150px;
+  width: 17em;
   height: 150px;
+
+  @media ${device.mobileL} {
+    width: 100%;
+    height: 80vw;
+    margin: 0 auto;
+  }
 `
 
 const StyledImg = styled(Img)`
@@ -27,8 +33,7 @@ const StyledImg = styled(Img)`
 
   @media ${device.mobileL} {
     width: 100%;
-    height: 80vw;
-    margin: 0 auto;
+    height: 100%;
   }
 `
 
