@@ -48,6 +48,8 @@ const IconContainer = styled.div`
 `
 
 const StyledIcon = styled(FontAwesomeIcon)`
+  height: 60px;
+  width: 60px;
   font-size: 3.5vw;
 
   :hover {

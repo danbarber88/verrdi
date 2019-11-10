@@ -137,6 +137,11 @@ const IconContainer = styled.div`
   color: ${props => props.theme.yellow};
 `
 
+const Icon = styled(FontAwesomeIcon)`
+  height: 40px;
+  width: 40px;
+`
+
 const Footer = () => (
   <Wrapper>
     <Container>
@@ -179,7 +184,7 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <FontAwesomeIcon icon={["fab", "instagram"]} />
+            <Icon icon={["fab", "instagram"]} />
           </a>
           <a
             target="_blank"
@@ -187,7 +192,7 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            <Icon icon={["fab", "linkedin"]} />
           </a>
           <a
             target="_blank"
@@ -195,7 +200,7 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <FontAwesomeIcon icon={["fab", "facebook-square"]} />
+            <Icon icon={["fab", "facebook-square"]} />
           </a>
           <a
             target="_blank"
@@ -203,7 +208,7 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <FontAwesomeIcon icon={["fab", "twitter"]} />
+            <Icon icon={["fab", "twitter"]} />
           </a>
         </IconContainer>
       </Bottom>

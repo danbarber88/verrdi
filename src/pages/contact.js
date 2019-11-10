@@ -139,6 +139,8 @@ const MapContainer = styled.div`
 `
 
 const Icon = styled(FontAwesomeIcon)`
+  height: 40px;
+  width: 40px;
   font-size: 42px;
   color: #fff;
 `
