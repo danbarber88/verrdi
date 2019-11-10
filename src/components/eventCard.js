@@ -123,58 +123,60 @@ const Price = styled.div`
   }
 `
 
-const EventCard = ({ props }) => (
-  <Container>
-    {props.image && <Image img={props.image} />}
-    <TextContainer>
-      <Name>{props.name}</Name>
-      <CourseDate>{dayjs(props.startDate).format("dddd Do MMMM")}</CourseDate>
-      <CourseTime>
-        {dayjs(props.startDate).format("h:mma") +
-          " - " +
-          dayjs(props.endDate).format("h:mma")}
-      </CourseTime>
-      <Spacer />
-      <Info>
-        <div>
-          <ul>
-            {props.placesRemaining <= 5 ? (
-              props.placesRemaining === 0 ? (
-                <li>
-                  <span className="red">SOLD OUT</span>
-                </li>
+const EventCard = props => {
+  return (
+    <Container>
+      {props.image && <Image img={props.image} />}
+      <TextContainer>
+        <Name>{props.name}</Name>
+        <CourseDate>{dayjs(props.startDate).format("dddd Do MMMM")}</CourseDate>
+        <CourseTime>
+          {dayjs(props.startDate).format("h:mma") +
+            " - " +
+            dayjs(props.endDate).format("h:mma")}
+        </CourseTime>
+        <Spacer />
+        <Info>
+          <div>
+            <ul>
+              {props.placesRemaining <= 5 ? (
+                props.placesRemaining === 0 ? (
+                  <li>
+                    <span className="red">SOLD OUT</span>
+                  </li>
+                ) : (
+                  <li>
+                    <span className="red">
+                      Only {props.placesRemaining} Places remaining
+                    </span>
+                  </li>
+                )
               ) : (
-                <li>
-                  <span className="red">
-                    Only {props.placesRemaining} Places remaining
-                  </span>
-                </li>
-              )
+                <li>{props.placesRemaining} Places remaining</li>
+              )}
+              <li>
+                {props.street}, <br />
+                {props.city}, {props.postCode}
+              </li>
+              <li>Free onsite parking</li>
+            </ul>
+          </div>
+          <ButtonAndPrice>
+            <Price>£{props.price}</Price>
+            {props.placesRemaining === 0 ? (
+              <Button href={props.url} target="_blank">
+                Details
+              </Button>
             ) : (
-              <li>{props.placesRemaining} Places remaining</li>
+              <Button href={props.url} target="_blank">
+                Book Course
+              </Button>
             )}
-            <li>
-              {props.street}, <br />
-              {props.city}, {props.postCode}
-            </li>
-            <li>Free onsite parking</li>
-          </ul>
-        </div>
-        <ButtonAndPrice>
-          <Price>£{props.price}</Price>
-          {props.placesRemaining === 0 ? (
-            <Button href={props.url} target="_blank">
-              Details
-            </Button>
-          ) : (
-            <Button href={props.url} target="_blank">
-              Book Course
-            </Button>
-          )}
-        </ButtonAndPrice>
-      </Info>
-    </TextContainer>
-  </Container>
-)
+          </ButtonAndPrice>
+        </Info>
+      </TextContainer>
+    </Container>
+  )
+}
 
 export default EventCard
