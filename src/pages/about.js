@@ -73,7 +73,7 @@ const AboutPage = ({ data }) => (
         </p>
         <Garry>- Garry Barber</Garry>
       </Content>
-      <SideColumn links docs cpc />
+      <SideColumn social links docs cpc />
     </Container>
   </Layout>
 )

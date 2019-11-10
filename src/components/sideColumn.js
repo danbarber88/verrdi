@@ -62,26 +62,75 @@ const SideColumn = props => {
     <Container>
       {props.children}
 
+      {props.social && (
+        <>
+          <h2>Social Links</h2>
+          <a href="" target="_blank" rel="noopener noreferrer nofollow">
+            Visit us on Facebook{" "}
+            <span style={{ color: "red" }}>
+              <strong>NEEDS FACEBOOK LINK</strong>
+            </span>
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer nofollow">
+            Follow our Twitter{" "}
+            <span style={{ color: "red" }}>
+              <strong>NEEDS TWITTER LINK</strong>
+            </span>
+          </a>
+          <a
+            href="https://www.google.com/search?q=verrdi&rlz=1C1CHBF_en-GBGB784GB784&oq=verrdi&aqs=chrome..69i57j69i60l4j69i65.1335j0j7&sourceid=chrome&ie=UTF-8#lrd=0x4878bfc514f390b9:0x2c210e5854424f54,3,,,"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Leave a Google review
+          </a>
+        </>
+      )}
+
       {props.links && (
         <>
           <h2>Useful Links</h2>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Jaupt Website
+          <a
+            href="https://www.gov.uk/check-your-driver-cpc-periodic-training-hours"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Check my CPC Hours (GOV UK)
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Gov CPC
+          <a
+            href="https://www.gov.uk/driver-cpc-training"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            CPC Training (GOV UK)
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            DVLA
+          <a
+            href="https://www.gov.uk/view-driving-licence"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Get a Check Code or view your Driving Licence
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Verrdi Facebook Page
+          <a
+            href="https://www.gov.uk/replace-driver-cpc-card"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Replace Driver CPC Card
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Leave a Review (Google)
+          <a
+            href="https://www.gov.uk/apply-for-a-digital-tachograph-driver-smart-card"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Replace Digital Tachograph Card
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Leave a Review (Facebook)
+          <a
+            href="https://www.gov.uk/apply-online-to-replace-a-driving-licence"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Replace Driving Licence
           </a>
         </>
       )}
@@ -89,23 +138,47 @@ const SideColumn = props => {
       {props.docs && (
         <>
           <h2>Useful Documents</h2>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Joining Instructions
+          <a
+            href="https://www.gov.uk/government/publications/working-time-regulations-for-mobile-workers/working-time-rules-lorry-bus-and-coach-drivers-and-crew"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Working Time Regs
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Terms of Business
+          <a
+            href="https://www.gov.uk/drivers-hours/eu-rules"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            EU Drivers Hours
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            CPC Course Schedule
+          <a
+            href="https://www.gov.uk/drivers-hours/gb-domestic-rules"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            UK Domestic Driving Rules
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Refer a friend
+          <a
+            href="https://www.youtube.com/watch?v=rRdP5F3c_HI"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Vehicle Walkround Video
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Tachograph Rules (Site)
+          <a
+            href="/simplified-guidance-eu-drivers-hours-working-time-rules.pdf"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Simplified guidance - EU drivers hours
           </a>
-          <a target="_blank" rel="noopener noreferrer nofollow">
-            Tachograph Rules (PDF Document)
+          <a
+            href="/heavy-goods-vehicle-walkaround-check-diagram.pdf"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            HGV walkaround check diagram
           </a>
         </>
       )}
