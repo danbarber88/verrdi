@@ -78,7 +78,12 @@ const DriverInformationPage = ({ data }) => {
             week (not even half a pint)
           </p>
           <StyledButton to="/booking/">Book Now</StyledButton>
-          <h3>Keep up to date with what we are doing</h3>
+          <h3>News and Offers</h3>
+          <p>
+            Not ready to book yet but want to be kept informed of future
+            courses? Complete the form below and we'll make sure to send you our
+            latest news and offers.
+          </p>
           <MailChimpForm />
         </Content>
         <SideColumn links docs cpc />

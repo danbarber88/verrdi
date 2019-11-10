@@ -50,7 +50,12 @@ const HaulierInformationPage = ({ data }) => {
             <li>Conflict Management</li>
             <li>Safeguarding & Customer Care</li>
           </ul>
-          <h3>Keep up to date with what we are doing</h3>
+          <h3>News and Offers</h3>
+          <p>
+            Not ready to book yet but want to be kept informed of future
+            courses? Complete the form below and we'll make sure to send you our
+            latest news and offers.
+          </p>
           <MailChimpForm />
         </Content>
         <SideColumn links docs cpc />
