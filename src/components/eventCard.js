@@ -1,6 +1,10 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import { device } from "../utils/device"
+import dayjs from "dayjs"
+import advancedFormat from "dayjs/plugin/advancedFormat"
+
+dayjs.extend(advancedFormat)
 
 const Container = styled.div`
   width: 100%;
@@ -119,80 +123,60 @@ const Price = styled.div`
   }
 `
 
-class EventCard extends Component {
-  render() {
-    const timeOptions = {
-      hour: "numeric",
-      minute: "numeric",
-    }
-
-    const courseStartDateAndTime = new Date(this.props.startDate)
-    const courseEndDateAndTime = new Date(this.props.endDate)
-
-    const dayOfMonth = new Intl.DateTimeFormat("en-GB", {
-      weekday: "short",
-      day: "numeric",
-      month: "long",
-    }).format(courseStartDateAndTime)
-
-    const startTime = new Intl.DateTimeFormat("en-GB", timeOptions).format(
-      courseStartDateAndTime
-    )
-
-    const endTime = new Intl.DateTimeFormat("en-GB", timeOptions).format(
-      courseEndDateAndTime
-    )
-
-    return (
-      <Container>
-        {this.props.image && <Image img={this.props.image} />}
-        <TextContainer>
-          <Name>{this.props.name}</Name>
-          <CourseDate>{dayOfMonth}</CourseDate>
-          <CourseTime>{startTime + " - " + endTime}</CourseTime>
-          <Spacer />
-          <Info>
-            <div>
-              <ul>
-                {this.props.placesRemaining <= 5 ? (
-                  this.props.placesRemaining === 0 ? (
-                    <li>
-                      <span className="red">SOLD OUT</span>
-                    </li>
-                  ) : (
-                    <li>
-                      <span className="red">
-                        Only {this.props.placesRemaining} Places remaining
-                      </span>
-                    </li>
-                  )
-                ) : (
-                  <li>{this.props.placesRemaining} Places remaining</li>
-                )}
+const EventCard = () => (
+  <Container>
+    {this.props.image && <Image img={this.props.image} />}
+    <TextContainer>
+      <Name>{this.props.name}</Name>
+      <CourseDate>
+        {dayjs(this.props.startDate).format("dddd Do MMMM")}
+      </CourseDate>
+      <CourseTime>
+        {dayjs(this.props.startDate).format("h:mma") +
+          " - " +
+          dayjs(this.props.endDate).format("h:mma")}
+      </CourseTime>
+      <Spacer />
+      <Info>
+        <div>
+          <ul>
+            {this.props.placesRemaining <= 5 ? (
+              this.props.placesRemaining === 0 ? (
                 <li>
-                  {this.props.street}, <br />
-                  {this.props.city}, {this.props.postCode}
+                  <span className="red">SOLD OUT</span>
                 </li>
-                <li>Free onsite parking</li>
-              </ul>
-            </div>
-            <ButtonAndPrice>
-              <Price>£{this.props.price}</Price>
-              {this.props.placesRemaining === 0 ? (
-                <Button href={this.props.url} target="_blank">
-                  Details
-                </Button>
               ) : (
-                <Button href={this.props.url} target="_blank">
-                  Book Course
-                </Button>
-              )}
-            </ButtonAndPrice>
-          </Info>
-        </TextContainer>
-      </Container>
-    )
-  }
-}
+                <li>
+                  <span className="red">
+                    Only {this.props.placesRemaining} Places remaining
+                  </span>
+                </li>
+              )
+            ) : (
+              <li>{this.props.placesRemaining} Places remaining</li>
+            )}
+            <li>
+              {this.props.street}, <br />
+              {this.props.city}, {this.props.postCode}
+            </li>
+            <li>Free onsite parking</li>
+          </ul>
+        </div>
+        <ButtonAndPrice>
+          <Price>£{this.props.price}</Price>
+          {this.props.placesRemaining === 0 ? (
+            <Button href={this.props.url} target="_blank">
+              Details
+            </Button>
+          ) : (
+            <Button href={this.props.url} target="_blank">
+              Book Course
+            </Button>
+          )}
+        </ButtonAndPrice>
+      </Info>
+    </TextContainer>
+  </Container>
+)
 
 export default EventCard

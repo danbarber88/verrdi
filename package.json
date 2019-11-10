@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.5",
     "@react-google-maps/api": "^1.7.7",
     "babel-plugin-styled-components": "^1.10.6",
+    "dayjs": "^1.8.17",
     "dotenv": "^8.2.0",
     "gatsby": "^2.15.28",
     "gatsby-image": "^2.2.23",
