@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { device } from "../utils/device"
@@ -13,34 +12,97 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import MailChimpForm from "../components/mailChimpForm"
 import useScript from "../hooks/useScript"
 
-const ContactDetails = styled.div`
-  width: 90%;
+const AllContactContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
-
-  div {
-    margin: 0 40px 0 0;
-  }
 
   @media ${device.laptop} {
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
   }
 
   @media ${device.tablet} {
     justify-content: center;
   }
+`
+
+const ContactDetails = styled.div`
+  width: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+
+  .address {
+    width: 520px;
+    margin-top: 40px;
+  }
+
+  @media ${device.laptop} {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+
+    .address {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
 
   @media ${device.mobileL} {
     justify-content: center;
 
+    .address {
+      margin-top: 20px;
+    }
+
     div {
       width: 100%;
-      margin: 0;
     }
+  }
+`
+
+const ContactCard = styled.div`
+  background-color: ${props => props.theme.green};
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.12), 1px 3px 4px rgba(0, 0, 0, 0.24),
+    0px -1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 240px;
+  margin-right: 40px;
+
+  @media ${device.tablet} {
+    width: 47%;
+    margin-right: 0;
+  }
+
+  @media ${device.mobileL} {
+    margin-top: 20px;
+  }
+`
+
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  height: 90px;
+`
+
+const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+  min-height: 150px;
+  padding: 15px;
+
+  a,
+  p {
+    margin: 0;
   }
 `
 
@@ -77,9 +139,44 @@ const MapContainer = styled.div`
 `
 
 const Icon = styled(FontAwesomeIcon)`
-  font-size: 32px;
-  color: ${props => props.theme.green};
-  margin: 20px;
+  font-size: 42px;
+  color: #fff;
+`
+
+const SocialSquareContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    width: 520px;
+    margin-top: 40px;
+  }
+
+  @media ${device.tablet} {
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+`
+
+const SocialSquare = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 110px;
+  border-radius: 10px;
+  background-color: ${props => props.theme.green};
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.12), 1px 3px 4px rgba(0, 0, 0, 0.24),
+    0px -1px 4px rgba(0, 0, 0, 0.25);
+
+  @media ${device.tablet} {
+    width: 20vw;
+    height: 20vw;
+  }
 `
 
 const ContactPage = ({ data }) => {
@@ -97,29 +194,82 @@ const ContactPage = ({ data }) => {
       <Container>
         <Content>
           <h1>How to get in touch</h1>
-          <ContactDetails>
-            <div>
-              <Icon icon={["fa", "phone-alt"]} />
-              <ContactHeader>Phone</ContactHeader>
-              <ContactLinks href="tel:01482298119">01482 298119</ContactLinks>
-            </div>
-            <div>
-              <Icon icon={["fa", "envelope"]} />
-              <ContactHeader>Email</ContactHeader>
-              <ContactLinks href="mailto:sales@verrdi.co.uk">
-                sales@verrdi.co.uk
-              </ContactLinks>
-            </div>
-            <div>
-              <Icon icon={["fa", "building"]} />
-              <ContactHeader>Address</ContactHeader>
-              <p>
-                123 Unknown Street
-                <br /> Hull
-                <br /> HU1 5TK
-              </p>
-            </div>
-          </ContactDetails>
+          <AllContactContainer>
+            <ContactDetails>
+              <ContactCard>
+                <IconContainer>
+                  <Icon icon={["fa", "phone-alt"]} />
+                </IconContainer>
+
+                <CardContent>
+                  <ContactHeader>Phone</ContactHeader>
+                  <ContactLinks href="tel:01482298119">
+                    01482 298119
+                  </ContactLinks>
+                </CardContent>
+              </ContactCard>
+              <ContactCard>
+                <IconContainer>
+                  <Icon icon={["fa", "envelope"]} />
+                </IconContainer>
+                <CardContent>
+                  <ContactHeader>Email</ContactHeader>
+                  <ContactLinks href="mailto:sales@verrdi.co.uk">
+                    sales@verrdi.co.uk
+                  </ContactLinks>
+                </CardContent>
+              </ContactCard>
+              <ContactCard className="address">
+                <IconContainer>
+                  <Icon icon={["fa", "building"]} />
+                </IconContainer>
+
+                <CardContent>
+                  <ContactHeader>Address</ContactHeader>
+                  <p>
+                    Compass House Business center
+                    <br /> Empringham Street
+                    <br /> Hull
+                    <br /> HU9 1RP
+                  </p>
+                </CardContent>
+              </ContactCard>
+            </ContactDetails>
+            <SocialSquareContainer>
+              <SocialSquare
+                target="_blank"
+                href="https://www.instagram.com/verrditrainingandrecruitment/"
+                className="social-link"
+                rel="noopener noreferrer nofollow"
+              >
+                <Icon icon={["fab", "instagram"]} />
+              </SocialSquare>
+              <SocialSquare
+                target="_blank"
+                href="https://www.linkedin.com/company/verrdi-training-recruitment-ltd/"
+                className="social-link"
+                rel="noopener noreferrer nofollow"
+              >
+                <Icon icon={["fab", "linkedin"]} />
+              </SocialSquare>
+              <SocialSquare
+                target="_blank"
+                href="https://www.facebook.com/verrditrainingandrecruitmentltd/"
+                className="social-link"
+                rel="noopener noreferrer nofollow"
+              >
+                <Icon icon={["fab", "facebook-square"]} />
+              </SocialSquare>
+              <SocialSquare
+                target="_blank"
+                href="https://twitter.com/LtdVerrdi"
+                className="social-link"
+                rel="noopener noreferrer nofollow"
+              >
+                <Icon icon={["fab", "twitter"]} />
+              </SocialSquare>
+            </SocialSquareContainer>
+          </AllContactContainer>
 
           <h2>Payment info</h2>
           <p>
@@ -129,23 +279,18 @@ const ContactPage = ({ data }) => {
             capicola fatback pancetta t-bone filet mignon.
           </p>
 
-          <h2>
+          <h2>News and Offers</h2>
+          <p>
             Not ready to book yet but want to be kept informed of future
-            courses?
-          </h2>
+            courses? Complete the form below and we'll make sure to send you our
+            latest news and offers.
+          </p>
           <MailChimpForm />
         </Content>
         <SideColumn links docs cpc>
           <MapContainer>
             <Map />
           </MapContainer>
-
-          {/* <h2>MailChimp email capture form here</h2>
-        <form>
-          <label>email</label>
-          <input style={{ width: "100%" }}></input>
-          <button style={{ marginTop: "10px" }}>submit</button>
-        </form> */}
         </SideColumn>
       </Container>
     </Layout>
