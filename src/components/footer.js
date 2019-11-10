@@ -143,9 +143,10 @@ const Footer = () => (
       <div>
         <StyledLogo />
         <p>
-          123 Unknown Street
+          Compass House Business Centre
+          <br /> Empringham Street
           <br /> Hull
-          <br /> HU1 5TK
+          <br /> HU9 1RP
         </p>
         <Email href="mailto:sales@verrdi.co.uk">sales@verrdi.co.uk</Email>
         <Phone href="tel:01482298119">01482 298119</Phone>
