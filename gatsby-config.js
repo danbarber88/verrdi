@@ -4,13 +4,15 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://www.verrdi.co.uk/",
     title: `Verrdi Training & Recruitment`,
     description: "PLACEHOLDER DESCRIPTION",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-react-svg",
+    `gatsby-plugin-react-svg`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,8 +51,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "",
-        sitemap: "",
+        host: "https://www.verrdi.co.uk",
+        sitemap: "https://www.verrdi.co.uk/sitemap.xml",
         policy: [{ userAgent: "*", disallow: "/" }],
       },
     },
