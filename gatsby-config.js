@@ -6,7 +6,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.verrdi.co.uk/",
     title: `Verrdi Transport Support Services`,
-    description: "PLACEHOLDER DESCRIPTION",
+    description:
+      "Verrdi Training Support Services is based in Hull and offers driver CPC training courses in a variety of comfortable locations across Yorkshire and Lincolnshire.",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
