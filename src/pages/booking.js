@@ -9,7 +9,10 @@ import Events from "../components/events"
 
 const BookingPage = ({ data }) => (
   <Layout>
-    <SEO title="Book Now" />
+    <SEO
+      title="Book Now"
+      description="Don't put the brakes on your periodic Driver CPC training! Browse our upcoming courses."
+    />
     <Banner textWidth="510px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
         Don’t put the brakes on your periodic{" "}

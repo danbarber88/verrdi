@@ -106,7 +106,7 @@ const CardContent = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Verrdi Transport Support Services" />
     <MainBanner />
     <TrainingSection>
       <h1>Driver CPC Training</h1>

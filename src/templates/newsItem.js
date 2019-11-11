@@ -15,7 +15,10 @@ const StyledImg = styled(Img)`
 
 const NewsPage = ({ data }) => (
   <Layout>
-    <SEO title="News" />
+    <SEO
+      title={data.newsItem.title}
+      description={data.newsItem.mainText.childMarkdownRemark.excerpt}
+    />
     <Banner textWidth="553px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
         The latest industry news from{" "}
@@ -65,6 +68,7 @@ export const query = graphql`
       mainText {
         childMarkdownRemark {
           html
+          excerpt(pruneLength: 120, format: PLAIN)
         }
       }
     }

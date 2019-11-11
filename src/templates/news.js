@@ -45,7 +45,10 @@ const NewsPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="News" />
+      <SEO
+        title="News"
+        description="The latest industry relevant news form Verrdi Transport Support Services"
+      />
       <Banner textWidth="553px" img={data.bannerImg.childImageSharp.fluid}>
         <p>
           The latest industry news from{" "}

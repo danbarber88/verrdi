@@ -8,7 +8,10 @@ import { Container, Content } from "../components/containers"
 
 const PeriodicDriverCPCTrainingPage = ({ data }) => (
   <Layout>
-    <SEO title="About" />
+    <SEO
+      title="What is Driver CPC?"
+      description="The main aim of Driver CPC is to ensure better trained drivers, who are up to date with current legislation."
+    />
     <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
         We aim to deliver quality training courses in a{" "}
@@ -22,7 +25,7 @@ const PeriodicDriverCPCTrainingPage = ({ data }) => (
         <h1>What is Driver CPC?</h1>
         <p>
           The most important thing to know is that professional bus, coach and
-          lorry drivers(vehicles over 3.5t) are now required to hold a Driver
+          lorry drivers (vehicles over 3.5t) are now required to hold a Driver
           CPC (Certificate of Professional Competence) licence in addition to a
           vocational driving licence. So whether you’re coming into the industry
           new, are an existing driver or are responsible for a fleet of drivers,

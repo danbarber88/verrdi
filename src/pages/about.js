@@ -21,7 +21,10 @@ const Garry = styled.p`
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="About" />
+    <SEO
+      title="About"
+      description="We aim to deliver quality training courses in a professional, informative and enjoyable environment."
+    />
     <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
       <p>
         We aim to deliver quality training courses in a{" "}

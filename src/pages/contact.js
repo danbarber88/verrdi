@@ -186,7 +186,10 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Contact Us" />
+      <SEO
+        title="Contact Us"
+        description="Verrdi Transport Support Services - Compass House, Empringham Street, Hull, HU9 1RP. Phone: 01482 298119. Email: sales@verrdi.co.uk"
+      />
       <Banner textWidth="655px" img={data.bannerImg.childImageSharp.fluid}>
         <p>
           Get in touch for any reason. We can answer any and all of your{" "}
@@ -229,7 +232,7 @@ const ContactPage = ({ data }) => {
                 <CardContent>
                   <ContactHeader>Address</ContactHeader>
                   <p>
-                    Compass House Business center
+                    Compass House Business Centre
                     <br /> Empringham Street
                     <br /> Hull
                     <br /> HU9 1RP

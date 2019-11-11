@@ -22,7 +22,10 @@ const DriverInformationPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Driver Information" />
+      <SEO
+        title="Driver Information"
+        description="If you are a driver responsible for organising your CPC Training we have a number of courses planned throughout the year."
+      />
       <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
         <p>
           We aim to deliver quality training courses in a{" "}
@@ -37,10 +40,11 @@ const DriverInformationPage = ({ data }) => {
           <p>
             If you are an Agency, Ltd Co. Driver, or an owner operator
             responsible for organising your CPC Training we have a number of
-            courses planned throughout 2019 - 2020 to offer you flexible,
-            convenient & comfortable locations. Whether you plan to do one
-            session at a time or an intensive course we offer various discounts
-            for loyal customers.
+            courses planned throughout {new Date().getFullYear()} -{" "}
+            {new Date().getFullYear() + 1} to offer you flexible, convenient &
+            comfortable locations. Whether you plan to do one session at a time
+            or an intensive course we offer various discounts for loyal
+            customers.
           </p>
           <p>
             If you are new to the industry and needing your first CPC Modules do
