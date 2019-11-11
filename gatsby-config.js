@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.verrdi.co.uk/",
-    title: `Verrdi Training & Recruitment`,
+    title: `Verrdi Transport Support Services`,
     description: "PLACEHOLDER DESCRIPTION",
   },
   plugins: [
@@ -46,6 +46,13 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.verrdi.co.uk`,
+        stripQueryString: true,
       },
     },
     {
