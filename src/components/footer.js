@@ -172,9 +172,13 @@ const Footer = () => (
               Cookie Policy
             </Link>
             <span> | </span>
-            <Link to="/privacy-policy" className="policy-link">
+            <a
+              target="_blank"
+              href="/verrdi-privacy-policy.pdf"
+              className="policy-link"
+            >
               Privacy Policy
-            </Link>
+            </a>
           </span>
         </Copyright>
         <IconContainer>
