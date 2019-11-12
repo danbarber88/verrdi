@@ -59,7 +59,7 @@ const Image = styled(Img)`
   }
 `
 
-const Avatar = styled.div`
+const PlaceholderAvatar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,6 +79,7 @@ const Avatar = styled.div`
     width: 150px;
     height: 150px;
     margin: 20px auto;
+    font-size: 60px;
   }
 `
 
@@ -139,7 +140,9 @@ const Testimonials = () => {
               {testimonial.node.image ? (
                 <Image fluid={testimonial.node.image.fluid} />
               ) : (
-                <Avatar>{testimonial.node.name.charAt(0)}</Avatar>
+                <PlaceholderAvatar>
+                  {testimonial.node.name.charAt(0)}
+                </PlaceholderAvatar>
               )}
             </div>
             <div>
