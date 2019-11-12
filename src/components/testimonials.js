@@ -40,6 +40,8 @@ const Testimonial = styled.div`
 `
 
 const QuoteIcon = styled(FontAwesomeIcon)`
+  width: 36px;
+  height: 31.5px;
   color: ${props => props.theme.yellow};
   font-size: 36px;
 `
