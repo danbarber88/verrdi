@@ -158,7 +158,7 @@ const EventCard = props => {
                 {props.street}, <br />
                 {props.city}, {props.postCode}
               </li>
-              <li>Free onsite parking</li>
+              <li>Free refreshments provided</li>
             </ul>
           </div>
           <ButtonAndPrice>
