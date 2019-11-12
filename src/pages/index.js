@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { device } from "../utils/device"
 import MapSection from "../components/mapSection"
-import Reviews from "../components/reviews"
+import Testimonials from "../components/testimonials"
 
 const Header2 = styled.h2`
   font-size: 28px;
@@ -209,7 +209,7 @@ const IndexPage = () => (
       </Card>
     </FlexibleServiceSection>
     <MapSection />
-    <Reviews />
+    <Testimonials />
   </Layout>
 )
 

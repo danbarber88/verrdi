@@ -78,7 +78,7 @@ const SideColumn = props => {
             </span>
           </a>
           <a
-            href="https://www.google.com/search?q=verrdi&rlz=1C1CHBF_en-GBGB784GB784&oq=verrdi&aqs=chrome..69i57j69i60l4j69i65.1335j0j7&sourceid=chrome&ie=UTF-8#lrd=0x4878bfc514f390b9:0x2c210e5854424f54,3,,,"
+            href="https://g.page/Verrdi/review "
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
