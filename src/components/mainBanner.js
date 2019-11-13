@@ -51,16 +51,21 @@ const StyledIcon = styled(FontAwesomeIcon)`
   height: 60px;
   width: 60px;
   font-size: 3.5vw;
+  transition: color 0.1s ease-in;
 
   :hover {
     color: ${props => props.theme.darkGreen};
   }
 
   @media ${device.tablet} {
+    height: 34px;
+    width: 34px;
     font-size: 4.5vw;
   }
 
   @media ${device.mobileL} {
+    height: 30px;
+    width: 30px;
     font-size: 8vw;
   }
 `
