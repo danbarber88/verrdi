@@ -325,10 +325,10 @@ const ContactPage = ({ data }) => {
 
           <h2>Payment info</h2>
           <p>
-            Sausage capicola shoulder prosciutto. Swine jowl leberkas, capicola
-            cow pork alcatra pig kielbasa brisket strip steak shankle. Pastrami
-            pig pork belly filet mignon salami tenderloin, cow cupim. Salami
-            capicola fatback pancetta t-bone filet mignon.
+            If you are interested in booking a course we are happy for you to
+            contact us direct and we can arrange payment over the telephone,
+            good old fashioned cash on the day (small deposit required) or to
+            book online head over to our booking page.
           </p>
 
           <h2>News and Offers</h2>
