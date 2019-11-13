@@ -65,17 +65,19 @@ const SideColumn = props => {
       {props.social && (
         <>
           <h2>Social Links</h2>
-          <a href="" target="_blank" rel="noopener noreferrer nofollow">
-            Visit us on Facebook{" "}
-            <span style={{ color: "red" }}>
-              <strong>NEEDS FACEBOOK LINK</strong>
-            </span>
+          <a
+            href="https://www.facebook.com/verrditss/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Visit us on Facebook
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer nofollow">
-            Follow our Twitter{" "}
-            <span style={{ color: "red" }}>
-              <strong>NEEDS TWITTER LINK</strong>
-            </span>
+          <a
+            href="https://twitter.com/LtdVerrdi"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Follow our Twitter
           </a>
           <a
             href="https://g.page/Verrdi/review "
