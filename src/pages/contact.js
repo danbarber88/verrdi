@@ -292,12 +292,12 @@ const ContactPage = ({ data }) => {
               </SocialSquare>
               <SocialSquare
                 target="_blank"
-                href="https://g.page/Verrdi/review "
+                href="https://search.google.com/local/reviews?placeid=ChIJuZDzFMW_eEgRVE9CVFgOISw"
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
                 <SocialIcon className="social-icon" icon={["fab", "google"]} />
-                <p>REVIEW</p>
+                <p>REVIEWS</p>
               </SocialSquare>
               <SocialSquare
                 target="_blank"
