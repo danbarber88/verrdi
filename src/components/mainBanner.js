@@ -22,25 +22,25 @@ const StyledWaves = styled(Waves)`
 
 const IconContainer = styled.div`
   position: relative;
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: space-around;
   margin-bottom: -3.5vw;
   bottom: 7.5vw;
-  left: 13%;
+  left: 20%;
 
   a {
     color: ${props => props.theme.green};
   }
 
   @media ${device.tablet} {
-    width: 50%;
-    left: 8%;
+    width: 40%;
+    left: 15%;
   }
 
   @media ${device.mobileL} {
     margin: 0 auto;
-    width: 80%;
+    width: 60%;
     margin-bottom: 40px;
     bottom: 0;
     left: 0;
@@ -92,23 +92,23 @@ const MainBanner = props => {
       <IconContainer>
         <a
           target="_blank"
-          href="https://www.instagram.com/verrditrainingandrecruitment/"
+          href="https://www.instagram.com/verrditss/"
           className="social-link"
           rel="noopener noreferrer nofollow"
         >
           <StyledIcon icon={["fab", "instagram"]} />
         </a>
-        <a
+        {/* <a
           target="_blank"
           href="https://www.linkedin.com/company/verrdi-training-recruitment-ltd/"
           className="social-link"
           rel="noopener noreferrer nofollow"
         >
           <StyledIcon icon={["fab", "linkedin"]} />
-        </a>
+        </a> */}
         <a
           target="_blank"
-          href="https://www.facebook.com/verrditrainingandrecruitmentltd/"
+          href="https://www.facebook.com/verrditss/"
           className="social-link"
           rel="noopener noreferrer nofollow"
         >

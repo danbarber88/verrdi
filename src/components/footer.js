@@ -130,7 +130,7 @@ const StyledBottomLogo = styled(BottomLogo)`
 `
 
 const IconContainer = styled.div`
-  width: 250px;
+  width: 175px;
   display: flex;
   justify-content: space-between;
   font-size: 40px;
@@ -184,23 +184,23 @@ const Footer = () => (
         <IconContainer>
           <a
             target="_blank"
-            href="https://www.instagram.com/verrditrainingandrecruitment/"
+            href="https://www.instagram.com/verrditss/"
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
             <Icon icon={["fab", "instagram"]} />
           </a>
-          <a
+          {/* <a
             target="_blank"
             href="https://www.linkedin.com/company/verrdi-training-recruitment-ltd/"
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
             <Icon icon={["fab", "linkedin"]} />
-          </a>
+          </a> */}
           <a
             target="_blank"
-            href="https://www.facebook.com/verrditrainingandrecruitmentltd/"
+            href="https://www.facebook.com/verrditss/"
             className="social-link"
             rel="noopener noreferrer nofollow"
           >

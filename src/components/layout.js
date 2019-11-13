@@ -12,6 +12,7 @@ import {
   faLinkedin,
   faFacebookSquare,
   faTwitter,
+  faGoogle,
 } from "@fortawesome/free-brands-svg-icons"
 import { faHandshake, faUser } from "@fortawesome/free-regular-svg-icons"
 import {
@@ -37,7 +38,8 @@ library.add(
   faEnvelope,
   faPhoneAlt,
   faSpinner,
-  faQuoteLeft
+  faQuoteLeft,
+  faGoogle
 )
 
 const theme = {

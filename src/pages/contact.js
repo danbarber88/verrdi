@@ -143,6 +143,27 @@ const Icon = styled(FontAwesomeIcon)`
   width: 40px;
   font-size: 42px;
   color: #fff;
+
+  @media ${device.mobileL} {
+    .social-icon {
+      height: 21px;
+      width: 21px;
+      font-size: 24px;
+    }
+  }
+`
+
+const SocialIcon = styled(FontAwesomeIcon)`
+  height: 40px;
+  width: 40px;
+  font-size: 42px;
+  color: #fff;
+
+  @media ${device.mobileL} {
+    height: 21px;
+    width: 21px;
+    font-size: 24px;
+  }
 `
 
 const SocialSquareContainer = styled.div`
@@ -166,18 +187,34 @@ const SocialSquareContainer = styled.div`
 
 const SocialSquare = styled.a`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 110px;
   width: 110px;
   border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
   background-color: ${props => props.theme.green};
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.12), 1px 3px 4px rgba(0, 0, 0, 0.24),
     0px -1px 4px rgba(0, 0, 0, 0.25);
 
+  p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   @media ${device.tablet} {
     width: 20vw;
     height: 20vw;
+  }
+
+  @media ${device.mobileL} {
+    p {
+      margin: 7.5px 0 0 0;
+      font-size: 10px;
+    }
   }
 `
 
@@ -243,27 +280,36 @@ const ContactPage = ({ data }) => {
             <SocialSquareContainer>
               <SocialSquare
                 target="_blank"
-                href="https://www.instagram.com/verrditrainingandrecruitment/"
+                href="https://www.instagram.com/verrditss/"
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
-                <Icon icon={["fab", "instagram"]} />
+                <SocialIcon
+                  className="social-icon"
+                  icon={["fab", "instagram"]}
+                />
+                <p>FOLLOW</p>
               </SocialSquare>
               <SocialSquare
                 target="_blank"
-                href="https://www.linkedin.com/company/verrdi-training-recruitment-ltd/"
+                href="https://g.page/Verrdi/review "
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
-                <Icon icon={["fab", "linkedin"]} />
+                <SocialIcon className="social-icon" icon={["fab", "google"]} />
+                <p>REVIEW</p>
               </SocialSquare>
               <SocialSquare
                 target="_blank"
-                href="https://www.facebook.com/verrditrainingandrecruitmentltd/"
+                href="https://www.facebook.com/verrditss/"
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
-                <Icon icon={["fab", "facebook-square"]} />
+                <SocialIcon
+                  className="social-icon"
+                  icon={["fab", "facebook-square"]}
+                />
+                <p>LIKE</p>
               </SocialSquare>
               <SocialSquare
                 target="_blank"
@@ -271,7 +317,8 @@ const ContactPage = ({ data }) => {
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
-                <Icon icon={["fab", "twitter"]} />
+                <SocialIcon className="social-icon" icon={["fab", "twitter"]} />
+                <p>FOLLOW</p>
               </SocialSquare>
             </SocialSquareContainer>
           </AllContactContainer>
