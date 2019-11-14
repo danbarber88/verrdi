@@ -90,7 +90,7 @@ class CookiePolicyPage extends Component {
           <Content>
             <h3 id="opt-out-anchor">
               This website, www.verrdi.co.uk (the "Website"), is operated by
-              Verdi TSS.
+              Verrdi TSS.
             </h3>
             <h3>Opt out of tracking</h3>
             <TrackingMessage optedOut={this.state.optedOut}>
@@ -102,9 +102,9 @@ class CookiePolicyPage extends Component {
             <h3>What are cookies?</h3>
             <p>
               Cookies are a small text files that are stored in your web browser
-              that allows Verdi TSS or a third party to recognize you. Cookies
+              that allows Verrdi TSS or a third party to recognize you. Cookies
               can be used to collect, store and share bits of information about
-              your activities across websites, including on Verdi TSS website.
+              your activities across websites, including on Verrdi TSS website.
             </p>
             <p>Cookies might be used for the following purposes:</p>
             <ul>
@@ -113,7 +113,7 @@ class CookiePolicyPage extends Component {
               <li>To store your preferences</li>
               <li>To enable ad delivery and behavioral advertising</li>
             </ul>
-            <p>Verdi TSS uses both session cookies and persistent cookies.</p>
+            <p>Verrdi TSS uses both session cookies and persistent cookies.</p>
 
             <p>
               A session cookie is used to identify a particular visit to our
@@ -129,13 +129,13 @@ class CookiePolicyPage extends Component {
               would use a persistent cookie if you asked that we keep you signed
               in.
             </p>
-            <h3>How do third parties use cookies on the Verdi TSS Website?</h3>
+            <h3>How do third parties use cookies on the Verrdi TSS Website?</h3>
             <p>
               Third party companies like analytics companies and ad networks
               generally use cookies to collect user information on an anonymous
               basis. They may use that information to build a profile of your
-              activities on the Verdi TSS Website and other websites that you've
-              visited.
+              activities on the Verrdi TSS Website and other websites that
+              you've visited.
             </p>
             <h3>What are your cookies options?</h3>
             <p>
