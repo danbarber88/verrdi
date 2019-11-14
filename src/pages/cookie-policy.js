@@ -93,7 +93,11 @@ class CookiePolicyPage extends Component {
               Verrdi TSS.
             </h3>
             <h3>Opt out of tracking</h3>
-            <TrackingMessage optedOut={this.state.optedOut}>
+            <TrackingMessage
+              optedOut={
+                this.props.cookies.get("opt-out") === "true" ? true : false
+              }
+            >
               {this.state.trackingMessage}
             </TrackingMessage>
             <Button onClick={this.toggleTracking}>
