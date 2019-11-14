@@ -168,7 +168,7 @@ const Footer = () => (
             Support Services Ltd
             <span className="tablet-hide"> | </span>
             <br />
-            <Link to="/cookie-policy" className="policy-link">
+            <Link to="/cookie-policy/" className="policy-link">
               Cookie Policy
             </Link>
             <span> | </span>

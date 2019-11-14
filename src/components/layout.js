@@ -4,8 +4,8 @@ import { ThemeProvider } from "styled-components"
 // import Media from "react-media"
 import { createGlobalStyle } from "styled-components"
 import { device } from "../utils/device"
-
 import { library } from "@fortawesome/fontawesome-svg-core"
+import { CookiesProvider } from "react-cookie"
 import {
   fab,
   faInstagram,
@@ -25,6 +25,7 @@ import {
 
 import Nav from "./nav"
 import Footer from "./footer"
+import GDPRBanner from "./gdprBanner"
 
 library.add(
   fab,
@@ -92,12 +93,15 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Nav />
-      <main>{children}</main>
-      <Footer />
-    </ThemeProvider>
+    <CookiesProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+        <GDPRBanner />
+      </ThemeProvider>
+    </CookiesProvider>
   )
 }
 
