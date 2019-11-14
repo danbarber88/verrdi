@@ -280,7 +280,7 @@ const ContactPage = ({ data }) => {
             <SocialSquareContainer>
               <SocialSquare
                 target="_blank"
-                href="https://www.instagram.com/verrditss/"
+                href="https://www.instagram.com/verrdi_tss/"
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >

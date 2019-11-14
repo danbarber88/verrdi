@@ -184,7 +184,7 @@ const Footer = () => (
         <IconContainer>
           <a
             target="_blank"
-            href="https://www.instagram.com/verrditss/"
+            href="https://www.instagram.com/verrdi_tss/"
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
