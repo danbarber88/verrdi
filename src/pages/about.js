@@ -1,18 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { device } from "../utils/device"
 import Banner from "../components/banner"
 import SideColumn from "../components/sideColumn"
 import { Container, Content } from "../components/containers"
-
-const StyledImg = styled(Img)`
-  width: 100%;
-  margin: 40px 0;
-`
 
 const Garry = styled.p`
   font-weight: 500;
