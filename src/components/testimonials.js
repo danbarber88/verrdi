@@ -99,70 +99,93 @@ const JobTitle = styled.div`
 `
 
 const Testimonials = () => {
-  const data = useStaticQuery(graphql`
-    query TestimonialQuery {
-      allContentfulTestimonial(
-        sort: { fields: createdAt, order: DESC }
-        limit: 2
-      ) {
-        edges {
-          node {
-            image {
-              fluid(
-                resizingBehavior: FILL
-                cropFocus: FACES
-                maxWidth: 150
-                maxHeight: 150
-                quality: 100
-              ) {
-                ...GatsbyContentfulFluid_withWebp
-              }
-            }
-            name
-            jobTitle
-            text {
-              childMarkdownRemark {
-                html
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
   return (
     <Container>
       <Header>Testimonials</Header>
       <TestimonialContainer>
-        {data.allContentfulTestimonial.edges.map((testimonial, i) => (
-          <Testimonial key={i}>
-            <div>
-              {testimonial.node.image ? (
-                <Image fluid={testimonial.node.image.fluid} />
-              ) : (
-                <PlaceholderAvatar>
-                  {testimonial.node.name.charAt(0)}
-                </PlaceholderAvatar>
-              )}
-            </div>
-            <div>
-              <QuoteIcon icon={["fa", "quote-left"]} />
-
-              <Text
-                dangerouslySetInnerHTML={{
-                  __html: testimonial.node.text.childMarkdownRemark.html,
-                }}
-              />
-              <Name>{testimonial.node.name}</Name>
-              {testimonial.node.jobTitle && (
-                <JobTitle>{testimonial.node.jobTitle}</JobTitle>
-              )}
-            </div>
-          </Testimonial>
-        ))}
+        <Testimonial
+          style={{
+            flexDirection: "column",
+            fontSize: "24px",
+            width: "750px",
+            textAlign: "center",
+          }}
+        >
+          To help us grow as a business please feel free to email me with
+          feedback. If you liked the serivce you have received let me know if
+          you would be willing to write a small testimonial.
+          <a style={{ margin: "20px 0" }} href="mailto:feedback@verrdi.co.uk">
+            feedback@verrdi.co.uk
+          </a>
+        </Testimonial>
       </TestimonialContainer>
     </Container>
   )
+
+  // const data = useStaticQuery(graphql`
+  //   query TestimonialQuery {
+  //     allContentfulTestimonial(
+  //       sort: { fields: createdAt, order: DESC }
+  //       limit: 2
+  //     ) {
+  //       edges {
+  //         node {
+  //           image {
+  //             fluid(
+  //               resizingBehavior: FILL
+  //               cropFocus: FACES
+  //               maxWidth: 150
+  //               maxHeight: 150
+  //               quality: 100
+  //             ) {
+  //               ...GatsbyContentfulFluid_withWebp
+  //             }
+  //           }
+  //           name
+  //           jobTitle
+  //           text {
+  //             childMarkdownRemark {
+  //               html
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // return (
+  //   <Container>
+  //     <Header>Testimonials</Header>
+  //     <TestimonialContainer>
+  //       {data.allContentfulTestimonial.edges.map((testimonial, i) => (
+  //         <Testimonial key={i}>
+  //           <div>
+  //             {testimonial.node.image ? (
+  //               <Image fluid={testimonial.node.image.fluid} />
+  //             ) : (
+  //               <PlaceholderAvatar>
+  //                 {testimonial.node.name.charAt(0)}
+  //               </PlaceholderAvatar>
+  //             )}
+  //           </div>
+  //           <div>
+  //             <QuoteIcon icon={["fa", "quote-left"]} />
+
+  //             <Text
+  //               dangerouslySetInnerHTML={{
+  //                 __html: testimonial.node.text.childMarkdownRemark.html,
+  //               }}
+  //             />
+  //             <Name>{testimonial.node.name}</Name>
+  //             {testimonial.node.jobTitle && (
+  //               <JobTitle>{testimonial.node.jobTitle}</JobTitle>
+  //             )}
+  //           </div>
+  //         </Testimonial>
+  //       ))}
+  //     </TestimonialContainer>
+  //   </Container>
+  // )
 }
 
 export default Testimonials

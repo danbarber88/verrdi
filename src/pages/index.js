@@ -178,7 +178,6 @@ const IndexPage = () => (
           <Button className="top-margin" to="/driver-information/">
             More Information
           </Button>
-          {/* <Button to="/bd">Call me back</Button> */}
         </CardContent>
       </Card>
       <Card>
@@ -204,7 +203,6 @@ const IndexPage = () => (
             to face and arrange a cost effective solution.
           </p>
           <Button to="/haulier-information/">More Information</Button>
-          {/* <Button to="/bd">Call me back</Button> */}
         </CardContent>
       </Card>
     </FlexibleServiceSection>
