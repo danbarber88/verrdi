@@ -109,9 +109,9 @@ const MapSection = () => (
         Verrdi Transport Support Services offers Driver CPC Training by friendly
         knowledgeable & experienced trainers, primarily across Yorkshire &
         Lincolnshire but we can offer a nationwide service if required. All
-        training venues are chosen for ease of access, free parking and
-        comfortable surroundings, with refreshments and snacks provided as a
-        minimum at each training session.
+        training venues are chosen for ease of access and comfortable
+        surroundings, with refreshments and snacks provided as a minimum at each
+        training session.
       </p>
     </TextContainer>
     <MapContainer>
