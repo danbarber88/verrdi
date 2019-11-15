@@ -75,9 +75,9 @@ function SEO({ description, lang, meta, title }) {
           }`}
       </style>
 
-      <script id="mcjs">
+      {/* <script id="mcjs">
         {`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ea339dabdb1164aa7e80038fd/6c25518c5f68fb75c11670b24.js");`}
-      </script>
+      </script> */}
 
       <script type="text/javascript">{`(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[6]='COURSE';ftypes[6]='dropdown';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[7]='PHONE_ALT';ftypes[7]='phone';fnames[0]='EMAIL';ftypes[0]='email';fnames[5]='CPC_EXPIRY';ftypes[5]='date';}(jQuery));var $mcj = jQuery.noConflict(true);`}</script>
     </Helmet>
