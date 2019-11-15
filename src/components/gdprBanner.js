@@ -62,7 +62,7 @@ class GDPRBanner extends Component {
     super(props)
 
     this.state = {
-      accepted: this.props.cookies.get("banner-accepted"),
+      accepted: true,
     }
   }
 
@@ -78,6 +78,9 @@ class GDPRBanner extends Component {
   }
 
   componentDidMount() {
+    this.setState({
+      accepted: this.props.cookies.get("banner-accepted"),
+    })
     // set cookies on page load if the opt out cookie is not present.
     if (!this.props.cookies.get("opt-out")) {
       this.props.cookies.set("gatsby-gdpr-google-analytics", true, {
