@@ -171,7 +171,9 @@ class Nav extends Component {
     return (
       <Container>
         <Wrapper>
-          <StyledLogo />
+          <Link to="/">
+            <StyledLogo />
+          </Link>
           <StyledHamburger onClick={this.toggleNav} />
 
           <MobileLinkContainer navOpen={this.state.navOpen}>
