@@ -146,7 +146,9 @@ const Footer = () => (
   <Wrapper>
     <Container>
       <div>
-        <StyledLogo />
+        <Link to="/">
+          <StyledLogo />
+        </Link>
         <p>
           Compass House
           <br /> 17-19 Empringham Street
