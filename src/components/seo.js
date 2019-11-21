@@ -40,7 +40,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: cardImage,
+          content: `https://www.verrid.co.uk${cardImage}`,
         },
         {
           property: `og:title`,
@@ -64,7 +64,7 @@ function SEO({ description, lang, meta, title }) {
         // },
         {
           name: "twitter:image",
-          content: cardImage,
+          content: `https://www.verrid.co.uk${cardImage}`,
         },
         {
           name: `twitter:title`,
