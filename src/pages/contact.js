@@ -372,13 +372,6 @@ export const query = graphql`
         }
       }
     }
-    hqImg: file(relativePath: { eq: "verrdi-hq.png" }) {
-      childImageSharp {
-        fluid(quality: 100, maxHeight: 350) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
   }
 `
 
