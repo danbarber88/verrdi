@@ -17,7 +17,11 @@ const HaulierInformationPage = ({ data }) => {
         title="Haulier Information"
         description="If you are a Haulier running a busy fleet and value your drivers development, we can offer cost effective courses around your operational needs."
       />
-      <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
+      <Banner
+        textWidth="630px"
+        alt="Truck driving down UK motorway"
+        img={data.bannerImg.childImageSharp.fluid}
+      >
         <p>
           We aim to deliver quality training courses in a{" "}
           <span className="yellow-text">professional</span>,{" "}

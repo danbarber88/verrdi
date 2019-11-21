@@ -80,6 +80,7 @@ class CookiePolicyPage extends Component {
         <SEO title="Cookie Policy" />
         <Banner
           textWidth="630px"
+          alt="Truck driving down UK motorway"
           img={this.props.data.bannerImg.childImageSharp.fluid}
         >
           <p>

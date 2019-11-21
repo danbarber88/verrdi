@@ -90,6 +90,7 @@ const MainBanner = props => {
       <StyledImg
         fluid={mainImg.childImageSharp.fluid}
         backgroundColor={props.theme.darkGreen}
+        alt="Verrdi Transport Support Services Driver CPC banner image"
       />
       <StyledWaves />
       <IconContainer>
@@ -99,7 +100,10 @@ const MainBanner = props => {
           className="social-link"
           rel="noopener noreferrer nofollow"
         >
-          <StyledIcon icon={["fab", "instagram"]} />
+          <StyledIcon
+            icon={["fab", "instagram"]}
+            aria-label="Verrdi's Instagram Page"
+          />
         </a>
         {/* <a
           target="_blank"
@@ -115,7 +119,10 @@ const MainBanner = props => {
           className="social-link"
           rel="noopener noreferrer nofollow"
         >
-          <StyledIcon icon={["fab", "facebook-square"]} />
+          <StyledIcon
+            icon={["fab", "facebook-square"]}
+            aria-label="Verrdi's Facebook Page"
+          />
         </a>
         <a
           target="_blank"
@@ -123,7 +130,10 @@ const MainBanner = props => {
           className="social-link"
           rel="noopener noreferrer nofollow"
         >
-          <StyledIcon icon={["fab", "twitter"]} />
+          <StyledIcon
+            icon={["fab", "twitter"]}
+            aria-label="Verrdi's Twitter Page"
+          />
         </a>
       </IconContainer>
     </Container>

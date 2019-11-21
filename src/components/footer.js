@@ -190,7 +190,10 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <Icon icon={["fab", "instagram"]} />
+            <Icon
+              icon={["fab", "instagram"]}
+              aria-label="Verrdi's Instagram Page"
+            />
           </a>
           {/* <a
             target="_blank"
@@ -206,7 +209,10 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <Icon icon={["fab", "facebook-square"]} />
+            <Icon
+              icon={["fab", "facebook-square"]}
+              aria-label="Verrdi's Facebook Page"
+            />
           </a>
           <a
             target="_blank"
@@ -214,7 +220,10 @@ const Footer = () => (
             className="social-link"
             rel="noopener noreferrer nofollow"
           >
-            <Icon icon={["fab", "twitter"]} />
+            <Icon
+              icon={["fab", "twitter"]}
+              aria-label="Verrdi's Twitter Page"
+            />
           </a>
         </IconContainer>
       </Bottom>

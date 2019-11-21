@@ -227,7 +227,11 @@ const ContactPage = ({ data }) => {
         title="Contact Us"
         description="Verrdi Transport Support Services - Compass House, Empringham Street, Hull, HU9 1RP. Phone: 01482 298119. Email: sales@verrdi.co.uk"
       />
-      <Banner textWidth="655px" img={data.bannerImg.childImageSharp.fluid}>
+      <Banner
+        textWidth="655px"
+        alt="Truck driving down UK motorway"
+        img={data.bannerImg.childImageSharp.fluid}
+      >
         <p>
           Get in touch for any reason. We can answer any and all of your{" "}
           <span className="yellow-text">questions</span>.
@@ -287,6 +291,7 @@ const ContactPage = ({ data }) => {
                 <SocialIcon
                   className="social-icon"
                   icon={["fab", "instagram"]}
+                  aria-label="Verrdi's Instagram Page"
                 />
                 <p>FOLLOW</p>
               </SocialSquare>
@@ -296,7 +301,11 @@ const ContactPage = ({ data }) => {
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
-                <SocialIcon className="social-icon" icon={["fab", "google"]} />
+                <SocialIcon
+                  className="social-icon"
+                  icon={["fab", "google"]}
+                  aria-label="Verrdi's Reviews"
+                />
                 <p>REVIEWS</p>
               </SocialSquare>
               <SocialSquare
@@ -308,6 +317,7 @@ const ContactPage = ({ data }) => {
                 <SocialIcon
                   className="social-icon"
                   icon={["fab", "facebook-square"]}
+                  aria-label="Verrdi's Facebook Page"
                 />
                 <p>LIKE</p>
               </SocialSquare>
@@ -317,7 +327,11 @@ const ContactPage = ({ data }) => {
                 className="social-link"
                 rel="noopener noreferrer nofollow"
               >
-                <SocialIcon className="social-icon" icon={["fab", "twitter"]} />
+                <SocialIcon
+                  className="social-icon"
+                  icon={["fab", "twitter"]}
+                  aria-label="Verrdi's Twitter Page"
+                />
                 <p>FOLLOW</p>
               </SocialSquare>
             </SocialSquareContainer>

@@ -12,7 +12,11 @@ const PeriodicDriverCPCTrainingPage = ({ data }) => (
       title="What is Driver CPC?"
       description="The main aim of Driver CPC is to ensure better trained drivers, who are up to date with current legislation."
     />
-    <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
+    <Banner
+      textWidth="630px"
+      alt="Truck driving down UK motorway"
+      img={data.bannerImg.childImageSharp.fluid}
+    >
       <p>
         We aim to deliver quality training courses in a{" "}
         <span className="yellow-text">professional</span>,{" "}

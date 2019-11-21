@@ -19,7 +19,11 @@ const NewsPage = ({ data }) => (
       title={data.newsItem.title}
       description={data.newsItem.mainText.childMarkdownRemark.excerpt}
     />
-    <Banner textWidth="553px" img={data.bannerImg.childImageSharp.fluid}>
+    <Banner
+      textWidth="553px"
+      alt="Trucks parked at a service station"
+      img={data.bannerImg.childImageSharp.fluid}
+    >
       <p>
         The latest industry news from{" "}
         <span className="yellow-text">Verrdi Transport Support Services</span>.

@@ -26,7 +26,11 @@ const DriverInformationPage = ({ data }) => {
         title="Driver Information"
         description="If you are a driver responsible for organising your CPC Training we have a number of courses planned throughout the year."
       />
-      <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
+      <Banner
+        textWidth="630px"
+        alt="Truck driving down UK motorway"
+        img={data.bannerImg.childImageSharp.fluid}
+      >
         <p>
           We aim to deliver quality training courses in a{" "}
           <span className="yellow-text">professional</span>,{" "}

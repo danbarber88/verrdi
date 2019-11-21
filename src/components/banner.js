@@ -103,7 +103,7 @@ const Banner = props => (
   <Container textWidth={props.textWidth}>
     <TextContainer textWidth={props.textWidth}>{props.children}</TextContainer>
     <ImageContainer>
-      <StyledImg fluid={props.img} />
+      <StyledImg fluid={props.img} alt={props.alt} />
       <StyledWave />
     </ImageContainer>
   </Container>

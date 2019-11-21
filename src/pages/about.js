@@ -18,7 +18,11 @@ const AboutPage = ({ data }) => (
       title="About"
       description="We aim to deliver quality training courses in a professional, informative and enjoyable environment."
     />
-    <Banner textWidth="630px" img={data.bannerImg.childImageSharp.fluid}>
+    <Banner
+      textWidth="630px"
+      alt="Truck driving down UK motorway"
+      img={data.bannerImg.childImageSharp.fluid}
+    >
       <p>
         We aim to deliver quality training courses in a{" "}
         <span className="yellow-text">professional</span>,{" "}
