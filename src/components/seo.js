@@ -80,6 +80,28 @@ function SEO({ description, lang, meta, title }) {
       </script>
 
       {/* <script type="text/javascript">{`(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[6]='COURSE';ftypes[6]='dropdown';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[7]='PHONE_ALT';ftypes[7]='phone';fnames[0]='EMAIL';ftypes[0]='email';fnames[5]='CPC_EXPIRY';ftypes[5]='date';}(jQuery));var $mcj = jQuery.noConflict(true);`}</script> */}
+
+      <script type="application/ld+json">
+        {`
+              {
+                "@context": "http://www.schema.org",
+                "@type": "LocalBusiness",
+                "name": "Verrdi Transport Support Services",
+                "url": "https://www.verrdi.co.uk/",
+                "image": "https://www.verrdi.co.uk/static/50c79b86a3e9aa10bab82c3791597314/88dd5/main-banner-image.jpg",
+                "description": "Verrdi Training Support Services is based in Hull and offers driver CPC training courses in a variety of comfortable locations across Yorkshire and Lincolnshire.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Compass House, 17-19 Empringham St",
+                  "addressLocality": "Hull",
+                  "postalCode": "HU9 1RP",
+                  "addressCountry": "Britain"
+                },
+                "email": "info@verrdi.co.uk",
+                "telephone": "01482 298",
+                "openingHours": "Mo 06:00-18:00 Tu 06:00-18:00 We 06:00-18:00 Th 06:00-18:00 Fr 06:00-18:00 Sa 06:00-18:00",
+              }`}
+      </script>
     </Helmet>
   )
 }
