@@ -269,8 +269,8 @@ const ContactPage = ({ data }) => {
                 <CardContent>
                   <ContactHeader>Address</ContactHeader>
                   <p>
-                    Compass House Business Centre
-                    <br /> Empringham Street
+                    Compass House
+                    <br /> 17-19 Empringham Street
                     <br /> Hull
                     <br /> HU9 1RP
                   </p>
