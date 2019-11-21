@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: cardImage,
+          content: `https://www.verrdi.co.uk${cardImage}`,
         },
         {
           property: `og:title`,
@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         // },
         {
           name: "twitter:image",
-          content: cardImage,
+          content: `https://www.verrdi.co.uk${cardImage}`,
         },
         {
           name: `twitter:title`,
