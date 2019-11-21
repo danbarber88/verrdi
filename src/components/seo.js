@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import cardImage from "../images/logo.png"
 
 function SEO({ description, lang, meta, title }) {
   const data = useStaticQuery(
@@ -13,19 +14,11 @@ function SEO({ description, lang, meta, title }) {
             description
           }
         }
-        file(relativePath: { eq: "logo.png" }) {
-          childImageSharp {
-            fixed {
-              src
-            }
-          }
-        }
       }
     `
   )
 
   const metaDescription = description || data.site.siteMetadata.description
-  const cardImage = data.file.childImageSharp.fixed.src
 
   return (
     <Helmet
@@ -40,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://www.verrid.co.uk${cardImage}`,
+          content: cardImage,
         },
         {
           property: `og:title`,
@@ -64,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         // },
         {
           name: "twitter:image",
-          content: `https://www.verrid.co.uk${cardImage}`,
+          content: cardImage,
         },
         {
           name: `twitter:title`,
