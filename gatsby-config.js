@@ -72,9 +72,9 @@ module.exports = {
           // Setting this parameter is optional
           anonymize: true,
         },
-        // facebookPixel: {
-        //   pixelId: 'YOUR_FACEBOOK_PIXEL_ID'
-        // },
+        facebookPixel: {
+          pixelId: "",
+        },
         // Defines the environments where the tracking should be available  - default is ["production"]
         environments: ["production", "development"],
       },
