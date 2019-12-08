@@ -65,18 +65,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-gdpr-cookies`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        googleAnalytics: {
-          trackingId: `${process.env.GATSBY_GOOGLE_ANALYTICS_ID}`,
-          // Setting this parameter is optional
-          anonymize: true,
-        },
-        facebookPixel: {
-          pixelId: "",
-        },
-        // Defines the environments where the tracking should be available  - default is ["production"]
-        environments: ["production", "development"],
+        // The property ID; the tracking code won't be generated without it
+        trackingId: `${process.env.GATSBY_GOOGLE_ANALYTICS_ID}`,
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

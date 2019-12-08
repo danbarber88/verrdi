@@ -4,76 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/banner"
 import { Container, Content } from "../components/containers"
-import { withCookies } from "react-cookie"
-import styled from "styled-components"
-
-const Button = styled.button`
-  text-align: center;
-  padding: 7.5px 10px;
-  background-color: ${props => props.theme.green};
-  color: #fff;
-  border-radius: 2px;
-  font-weight: bold;
-  text-decoration: none;
-  min-width: 124px;
-  border: none;
-  cursor: pointer;
-  margin: 0 0 30px 0;
-`
-
-const TrackingMessage = styled.p`
-  color: ${props => (props.optedOut ? "red" : "green")};
-  font-weight: 500;
-`
 
 class CookiePolicyPage extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      optedOut: this.props.cookies.get("opt-out") === "true" ? true : false,
-      trackingMessage:
-        this.props.cookies.get("opt-out") === "true"
-          ? "Tracking is disabled."
-          : "Tracking is enabled, thanks for your support.",
-      buttonText:
-        this.props.cookies.get("opt-out") === "true"
-          ? "Enable Tracking"
-          : "Disable Tracking",
-    }
-
-    this.toggleTracking = this.toggleTracking.bind(this)
-  }
-
-  toggleTracking() {
-    this.setState({ optedOut: !this.state.optedOut }, () => {
-      this.props.cookies.set("opt-out", this.state.optedOut, {
-        path: "/",
-      })
-      this.props.cookies.set(
-        "gatsby-gdpr-google-analytics",
-        !this.state.optedOut,
-        {
-          path: "/",
-        }
-      )
-      this.props.cookies.set(
-        "gatsby-gdpr-facebook-pixel",
-        !this.state.optedOut,
-        {
-          path: "/",
-        }
-      )
-
-      // if the user either disables or enables tracking they wont be needing the banner anymore so can class it as accepted.
-      this.props.cookies.set("banner-accepted", true, { path: "/" })
-
-      // reload the window so gatsby executes onClientEntry()
-      // which is where gatsby-plugin-gdpr-cookies enables and disables the analytics
-      window.location.reload()
-    })
-  }
-
   render() {
     return (
       <Layout>
@@ -89,21 +21,6 @@ class CookiePolicyPage extends Component {
         </Banner>
         <Container>
           <Content>
-            <h3 id="opt-out-anchor">
-              This website, www.verrdi.co.uk (the "Website"), is operated by
-              Verrdi TSS.
-            </h3>
-            <h3>Opt out of tracking</h3>
-            <TrackingMessage
-              optedOut={
-                this.props.cookies.get("opt-out") === "true" ? true : false
-              }
-            >
-              {this.state.trackingMessage}
-            </TrackingMessage>
-            <Button onClick={this.toggleTracking}>
-              {this.state.buttonText}
-            </Button>
             <h3>What are cookies?</h3>
             <p>
               Cookies are a small text files that are stored in your web browser
@@ -208,4 +125,4 @@ export const query = graphql`
   }
 `
 
-export default withCookies(CookiePolicyPage)
+export default CookiePolicyPage

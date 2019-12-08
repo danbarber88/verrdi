@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { device } from "../utils/device"
 import { withCookies } from "react-cookie"
-import { Link } from "gatsby"
 
 const Banner = styled.div`
   position: fixed;
@@ -50,12 +49,6 @@ const Button = styled.button`
     margin: 20px 0 0 0;
   }
 `
-const StyledLink = styled(Link)`
-  color: #fff;
-  font-size: 14px;
-  text-decoration: underline;
-  white-space: nowrap;
-`
 
 class GDPRBanner extends Component {
   constructor(props) {
@@ -81,13 +74,6 @@ class GDPRBanner extends Component {
     this.setState({
       accepted: this.props.cookies.get("banner-accepted"),
     })
-    // set cookies on page load if the opt out cookie is not present.
-    if (!this.props.cookies.get("opt-out")) {
-      this.props.cookies.set("gatsby-gdpr-google-analytics", true, {
-        path: "/",
-      })
-      this.props.cookies.set("gatsby-gdpr-facebook-pixel", true, { path: "/" })
-    }
   }
 
   render() {
@@ -100,12 +86,7 @@ class GDPRBanner extends Component {
               traffic. We also share information about your use of our site with
               our social media, advertising and analytics partners who may
               combine it with other information that you’ve provided to them or
-              that they’ve collected from your use of their services. If you
-              would prefer we did not collect this information you can{" "}
-              <StyledLink to="/cookie-policy/#opt-out-anchor">
-                opt out
-              </StyledLink>
-              .{" "}
+              that they’ve collected from your use of their services.
             </Text>
 
             <Button onClick={this.acceptCookies}>Accept</Button>
