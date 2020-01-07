@@ -96,10 +96,10 @@ const Layout = ({ children }) => {
     <CookiesProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Nav />
+        {/* <Nav /> */}
         <main>{children}</main>
-        <Footer />
-        <GDPRBanner />
+        {/* <Footer />
+        <GDPRBanner /> */}
       </ThemeProvider>
     </CookiesProvider>
   )

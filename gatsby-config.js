@@ -61,7 +61,7 @@ module.exports = {
       options: {
         host: "https://www.verrdi.co.uk",
         sitemap: "https://www.verrdi.co.uk/sitemap.xml",
-        // policy: [{ userAgent: "*", disallow: "/" }],
+        policy: [{ userAgent: "*", disallow: "/" }],
       },
     },
     {

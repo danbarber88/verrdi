@@ -10,6 +10,10 @@ import { device } from "../utils/device"
 import MapSection from "../components/mapSection"
 import Testimonials from "../components/testimonials"
 
+// TEMP //
+import TempLogo from "../images/temp-logo.svg"
+// --- //
+
 const Header2 = styled.h2`
   font-size: 28px;
 `
@@ -104,10 +108,41 @@ const CardContent = styled.div`
   background-color: #fff;
 `
 
+// TEMP STYLES //
+
+/* 
+  HOW TO UNDO 
+
+  Delete these styles and remove temp import at top
+  uncomment all the code and remove the tempcontainer component
+  uncomment code in layout
+  comment out robot blocking code in gatsby config
+  move pages from pages-holder folder to pages folder
+  uncomment all code in gatsby node
+*/
+
+const TempContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: ${props => props.theme.green};
+`
+
+const StyledTempLogo = styled(TempLogo)`
+  width: 50%;
+  height: 500px;
+`
+// ---------- //
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Verrdi Transport Support Services" />
-    <MainBanner />
+    <TempContainer>
+      <StyledTempLogo />
+    </TempContainer>
+    {/* <MainBanner />
     <TrainingSection>
       <h1>Driver CPC Training</h1>
       <SubHeader>Yorkshire & Lincolnshire</SubHeader>
@@ -207,7 +242,7 @@ const IndexPage = () => (
       </Card>
     </FlexibleServiceSection>
     <MapSection />
-    <Testimonials />
+    <Testimonials /> */}
   </Layout>
 )
 
