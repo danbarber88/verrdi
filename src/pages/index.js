@@ -10,10 +10,6 @@ import { device } from "../utils/device"
 import MapSection from "../components/mapSection"
 import Testimonials from "../components/testimonials"
 
-// TEMP //
-import TempLogo from "../images/temp-logo.svg"
-// --- //
-
 const Header2 = styled.h2`
   font-size: 28px;
 `
@@ -121,34 +117,10 @@ const CardContent = styled.div`
   uncomment all code in gatsby node
 */
 
-const TempContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /* height: 100%; */
-  background-color: ${props => props.theme.green};
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-`
-
-const StyledTempLogo = styled(TempLogo)`
-  width: 50%;
-  height: 500px;
-`
-// ---------- //
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Verrdi Transport Support Services" />
-    <TempContainer>
-      <StyledTempLogo />
-    </TempContainer>
-    {/* <MainBanner />
+    <MainBanner />
     <TrainingSection>
       <h1>Driver CPC Training</h1>
       <SubHeader>Yorkshire & Lincolnshire</SubHeader>
@@ -248,7 +220,7 @@ const IndexPage = () => (
       </Card>
     </FlexibleServiceSection>
     <MapSection />
-    <Testimonials /> */}
+    <Testimonials />
   </Layout>
 )
 
