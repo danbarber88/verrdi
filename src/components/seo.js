@@ -107,7 +107,7 @@ function SEO({ description, lang, meta, title }) {
                   "addressCountry": "Britain"
                 },
                 "email": "info@verrdi.co.uk",
-                "telephone": "01482 298119",
+                "telephone": "01482 699222",
                 "openingHours": "Mo 06:00-18:00 Tu 06:00-18:00 We 06:00-18:00 Th 06:00-18:00 Fr 06:00-18:00 Sa 06:00-18:00"
               }`}
       </script>

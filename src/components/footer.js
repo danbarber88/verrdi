@@ -156,7 +156,7 @@ const Footer = () => (
           <br /> HU9 1RP
         </p>
         <Email href="mailto:sales@verrdi.co.uk">sales@verrdi.co.uk</Email>
-        <Phone href="tel:01482298119">01482 298119</Phone>
+        <Phone href="tel:01482699222">01482 699222</Phone>
         <p>Company Number: 12041302</p>
         <p>Consortium Member: AC01885</p>
       </div>
