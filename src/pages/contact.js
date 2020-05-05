@@ -225,7 +225,7 @@ const ContactPage = ({ data }) => {
     <Layout>
       <SEO
         title="Contact Us"
-        description="Verrdi Transport Support Services - Compass House, Empringham Street, Hull, HU9 1RP. Phone: 01482 699222. Email: sales@verrdi.co.uk"
+        description="Verrdi Transport Support Services - Broadway House, 105 Ferensway, Hull, HU1 3UN. Phone: 01482 699222. Email: sales@verrdi.co.uk"
       />
       <Banner
         textWidth="655px"
@@ -273,10 +273,10 @@ const ContactPage = ({ data }) => {
                 <CardContent>
                   <ContactHeader>Address</ContactHeader>
                   <p>
-                    Compass House
-                    <br /> 17-19 Empringham Street
+                    Broadway House
+                    <br /> 105 Ferensway
                     <br /> Hull
-                    <br /> HU9 1RP
+                    <br /> HU1 3UN
                   </p>
                 </CardContent>
               </ContactCard>
