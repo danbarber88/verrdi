@@ -47,10 +47,10 @@ const SideColumn = props => {
   const { cpcLogo } = useStaticQuery(
     graphql`
       query {
-        cpcLogo: file(relativePath: { eq: "cpc-logo.jpg" }) {
+        cpcLogo: file(relativePath: { eq: "cpc-logo.png" }) {
           childImageSharp {
             fluid(quality: 100, maxHeight: 100) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
