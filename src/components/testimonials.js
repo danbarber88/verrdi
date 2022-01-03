@@ -112,7 +112,7 @@ const Testimonials = () => {
           }}
         >
           To help us grow as a business please feel free to email me with
-          feedback. If you liked the serivce you have received let me know if
+          feedback. If you liked the service you have received let me know if
           you would be willing to write a small testimonial.
           <a style={{ margin: "20px 0" }} href="mailto:feedback@verrdi.co.uk">
             feedback@verrdi.co.uk
@@ -170,7 +170,7 @@ const Testimonials = () => {
   //           </div>
   //           <div>
   //             <QuoteIcon icon={["fa", "quote-left"]} />
-
+  //
   //             <Text
   //               dangerouslySetInnerHTML={{
   //                 __html: testimonial.node.text.childMarkdownRemark.html,
