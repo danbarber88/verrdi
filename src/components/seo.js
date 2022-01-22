@@ -101,9 +101,9 @@ function SEO({ description, lang, meta, title }) {
                 "description": "Verrdi Training Support Services is based in Hull and offers driver CPC training courses in a variety of comfortable locations across Yorkshire and Lincolnshire.",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Broadway House, 105 Ferensway",
+                  "streetAddress": "One Business Village, Emily Street",
                   "addressLocality": "Hull",
-                  "postalCode": "HU1 3UN",
+                  "postalCode": "HU9 1ND",
                   "addressCountry": "Britain"
                 },
                 "email": "info@verrdi.co.uk",

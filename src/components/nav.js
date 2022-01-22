@@ -64,11 +64,33 @@ const StyledHamburger = styled(Hamburger)`
   }
 `
 
-const StyledButton = styled(Button)`
+// const StyledButton = styled(Button)`
+//   margin-left: 60px;
+//
+//   @media ${device.laptop} {
+//     margin-left: 30px;
+//   }
+// `
+
+const StyledA = styled.a`
+  display: inline-block;
+  text-align: center;
+  padding: 7.5px 10px;
+  background-color: ${props => props.theme.green};
+  color: #fff;
+  border-radius: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 124px;
+  margin-right: ${props => (props.marginRight ? "10px" : 0)};
   margin-left: 60px;
 
   @media ${device.laptop} {
     margin-left: 30px;
+  }
+
+  @media ${device.mobileL} {
+    margin-top: 10px;
   }
 `
 
@@ -178,7 +200,8 @@ class Nav extends Component {
 
           <MobileLinkContainer navOpen={this.state.navOpen}>
             <MobileNavItem className="book-now" navOpen={this.state.navOpen}>
-              <Link to="/booking/">Book Now</Link>
+              {/*<Link to="/booking/">Book Now</Link>*/}
+              <a href={'https://www.tickettailor.com/events/verrditransportsupportservicesltd'}>Book Now</a>
             </MobileNavItem>
 
             <MobileNavItem navOpen={this.state.navOpen}>
@@ -211,9 +234,10 @@ class Nav extends Component {
             <StyledLink to="/contact/" activeClassName="active">
               Contact
             </StyledLink>
-            <StyledButton green={true ? 1 : 0} to="/booking/">
-              Book now
-            </StyledButton>
+            {/*<StyledButton green={true ? 1 : 0} to="/booking">*/}
+            {/*  Book now*/}
+            {/*</StyledButton>*/}
+            <StyledA href={'https://www.tickettailor.com/events/verrditransportsupportservicesltd'}>Book Now</StyledA>
           </LinkContainer>
         </Wrapper>
       </Container>

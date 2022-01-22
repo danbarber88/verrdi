@@ -150,10 +150,10 @@ const Footer = () => (
           <StyledLogo />
         </Link>
         <p>
-          Broadway House
-          <br /> 105 Ferensway
+          One Business Village
+          <br /> Emily Street
           <br /> Hull
-          <br /> HU1 3UN
+          <br /> HU9 1ND
         </p>
         <Email href="mailto:sales@verrdi.co.uk">sales@verrdi.co.uk</Email>
         <Phone href="tel:01482699222">01482 699222</Phone>
