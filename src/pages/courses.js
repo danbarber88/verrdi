@@ -69,26 +69,28 @@ const CoursesPage = ({ data }) => (
         <Container>
             <Content>
                 <h1>Courses</h1>
-                <p>
-                    Verrdi Transport Support Services Ltd. delivers Driver CPC
-                    courses for individual drivers either online or in our brand
-                    new state of the art training room at our offices in Hull.
-                </p>
-                <p>
-                    We are also happy to chat to those organisations that employ
-                    drivers and you would like us to deliver their CPC training
-                    either at your premises or in our offices.
-                </p>
-
                 <h3>Driver CPC</h3>
                 <p>
-                    In order to complete your Driver CPC certification you need
-                    to complete the following seven courses within one month of
-                    the time you finish the first course.
+                    Verrdi Transport Support Services Ltd. deliver a number of
+                    Driver CPC courses for drivers who are required to complete
+                    their periodic training, either for drivers who are
+                    responsible for funding their own courses or companies who
+                    would like us to take care of their CPC training for them.
                 </p>
                 <p>
-                    Visit each individual course page for details about what the
-                    course is about and its contents.
+                    Whatever the scenario, we run scheduled courses that are
+                    available remotely via Zoom or in person at our offices in
+                    Hull. Or we can offer bespoke training packages for
+                    companies, including training on their site if facilities
+                    allow.
+                </p>
+
+                <h3>CPC Courses</h3>
+                <p>
+                    Please see the details of the DCPC courses we are currently
+                    delivering. Once you find the course you would like to
+                    attend just hit the “book now” button for the simplest &
+                    easiest way of booking onto the course of your choice.
                 </p>
                 <ul>
                     <StyledListItem fullWidth>
@@ -144,12 +146,12 @@ const CoursesPage = ({ data }) => (
                     </StyledListItem>
                 </ul>
 
-                <h3>Multi-booking discount</h3>
-                <p>
-                    We offer a discount if you choose to book all of these
-                    courses at once, email us or give us a call if you would
-                    prefer to pre-book all of your courses at once.
-                </p>
+                {/*<h3>Multi-booking discount</h3>*/}
+                {/*<p>*/}
+                {/*    We offer a discount if you choose to book all of these*/}
+                {/*    courses at once, email us or give us a call if you would*/}
+                {/*    prefer to pre-book all of your courses at once.*/}
+                {/*</p>*/}
             </Content>
             <SideColumn social links docs cpc />
         </Container>
