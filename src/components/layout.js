@@ -7,20 +7,26 @@ import { device } from "../utils/device"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { CookiesProvider } from "react-cookie"
 import {
-  fab,
-  faInstagram,
-  faLinkedin,
-  faFacebookSquare,
-  faTwitter,
-  faGoogle,
+    fab,
+    faInstagram,
+    faLinkedin,
+    faFacebookSquare,
+    faTwitter,
+    faGoogle,
 } from "@fortawesome/free-brands-svg-icons"
-import { faHandshake, faUser } from "@fortawesome/free-regular-svg-icons"
 import {
-  faBuilding,
-  faEnvelope,
-  faPhoneAlt,
-  faSpinner,
-  faQuoteLeft,
+    faHandshake,
+    faUser,
+    faCalendarAlt,
+    faMap,
+} from "@fortawesome/free-regular-svg-icons"
+import {
+    faBuilding,
+    faEnvelope,
+    faPhoneAlt,
+    faSpinner,
+    faQuoteLeft,
+    faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons"
 
 import Nav from "./nav"
@@ -28,29 +34,32 @@ import Footer from "./footer"
 import GDPRBanner from "./gdprBanner"
 
 library.add(
-  fab,
-  faInstagram,
-  faLinkedin,
-  faFacebookSquare,
-  faTwitter,
-  faHandshake,
-  faUser,
-  faBuilding,
-  faEnvelope,
-  faPhoneAlt,
-  faSpinner,
-  faQuoteLeft,
-  faGoogle
+    fab,
+    faInstagram,
+    faLinkedin,
+    faFacebookSquare,
+    faTwitter,
+    faHandshake,
+    faUser,
+    faBuilding,
+    faEnvelope,
+    faPhoneAlt,
+    faSpinner,
+    faQuoteLeft,
+    faGoogle,
+    faCalendarAlt,
+    faMap,
+    faMapMarkerAlt
 )
 
 const theme = {
-  lightGreen: "#006738",
-  green: "#014124",
-  darkGreen: "#002112",
-  yellow: "#F9AD35",
-  headerGray: "#535353",
-  textGray: "#767676",
-  contentWidth: "60%",
+    lightGreen: "#006738",
+    green: "#014124",
+    darkGreen: "#002112",
+    yellow: "#F9AD35",
+    headerGray: "#535353",
+    textGray: "#767676",
+    contentWidth: "60%",
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -62,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
       margin-top: 90.33px;
     }
 
@@ -92,21 +101,21 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Layout = ({ children }) => {
-  return (
-    <CookiesProvider>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-        <GDPRBanner />
-      </ThemeProvider>
-    </CookiesProvider>
-  )
+    return (
+        <CookiesProvider>
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <Nav />
+                <main>{children}</main>
+                <Footer />
+                <GDPRBanner />
+            </ThemeProvider>
+        </CookiesProvider>
+    )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout
