@@ -11,7 +11,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "dayjs": "^1.8.17",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.15.28",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.2.23",
     "gatsby-plugin-canonical-urls": "^2.1.14",
     "gatsby-plugin-google-analytics": "^2.1.29",
